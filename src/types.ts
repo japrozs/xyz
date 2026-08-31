@@ -1,4 +1,5 @@
 import { FTRProject } from "./projects/ftr";
+import { KreedProject } from "./projects/kreed";
 import { Manifesto } from "./projects/manifesto";
 import { PrimaryUnionProject } from "./projects/primary-union";
 import { SennaProject } from "./projects/senna";
@@ -14,6 +15,15 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+	{
+		id: "kreed-topsy-turvy",
+		name: "KREED",
+		year: "2026",
+		role: "Creative + Design",
+		description: "album cover",
+		link: "https://example.com",
+		component: KreedProject,
+	},
 	{
 		id: "primary-union",
 		name: "Primary Union",
