@@ -15,7 +15,7 @@ export default function Home() {
 
 	return (
 		<div className="py-1 px-2 h-dvh flex flex-col bg-black text-gray-200">
-			<div className="flex flex-row items-center border-gray-900 pb-1 border-b border-dashed">
+			<div className="flex flex-row items-center pb-1">
 				<p className="menlo text-white flex items-center">
 					<img
 						className="h-4 w-auto mr-2"
@@ -24,7 +24,7 @@ export default function Home() {
 					/>
 					jp singh
 				</p>
-				<p className="ml-auto pt-0.5 text-[0.95rem] text-gray-500">
+				<p className="ml-auto pt-0.5 text-[0.95rem]">
 					designer in atlanta
 				</p>
 			</div>
@@ -45,7 +45,7 @@ export default function Home() {
 				<div className="w-full md:w-1/2 overflow-y-auto custom-scrollbar">
 					<table className="w-full text-left text-sm text-[0.95rem]">
 						<thead>
-							<tr className="text-gray-500 border-b border-gray-800">
+							<tr className="text-gray-500">
 								<th className="pb-1 font-normal">project</th>
 								<th className="pb-1 font-normal">role</th>
 								<th className="pb-1 font-normal">year</th>
@@ -56,21 +56,15 @@ export default function Home() {
 								<tr
 									key={project.id}
 									onClick={() => setSelected(project)}
-									className={`cursor-pointer border-b border-gray-900 hover:bg-[#070707] ${
+									className={`cursor-pointer hover:bg-[#070707] ${
 										selected?.id === project.id
 											? "bg-[#070707]"
 											: ""
 									}`}
 								>
-									<td className="py-1 text-gray-200">
-										{project.name}
-									</td>
-									<td className="py-1 text-gray-500">
-										{project.role}
-									</td>
-									<td className="py-1 text-gray-500">
-										{project.year}
-									</td>
+									<td className="py-1">{project.name}</td>
+									<td className="py-1">{project.role}</td>
+									<td className="py-1">{project.year}</td>
 								</tr>
 							))}
 						</tbody>

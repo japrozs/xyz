@@ -8,13 +8,11 @@ interface ProjectIntroProps {
 export const ProjectIntro: React.FC<ProjectIntroProps> = ({ project }) => {
 	return (
 		<div>
-			<p className="text-gray-200 mb-1 text-base"> {project.name} </p>
-			<p className="text-gray-500 mb-2">
+			<p className="mb-1 text-base"> {project.name} </p>
+			<p className="mb-2 text-gray-500">
 				{project.year} · {project.role}
 			</p>
-			<p className="leading-relaxed text-gray-300">
-				{project.description}
-			</p>
+			<p className="leading-relaxed">{project.description}</p>
 			{/* {project.link !== "" && (
 				<a
 					href={project.link}
