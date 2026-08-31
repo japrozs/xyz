@@ -10,7 +10,7 @@ export const Manifesto: React.FC<ManifestoProps> = ({ project }) => {
 	return (
 		<div>
 			<ProjectIntro project={project} />
-			<ul className="mt-1.5 list-disc list-outside pl-3">
+			<ul className="mt-1.5 list-disc list-outside pl-5">
 				<li className="pl-1">
 					treat graphics as illustration; not decoration.
 				</li>

@@ -1,5 +1,6 @@
 @import url("https://fonts.cdnfonts.com/css/menlo");
 @import url("https://fonts.cdnfonts.com/css/helvetica-neue-55");
+@import url("https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro");
 @import url("https://rsms.me/inter/inter.css");
 @import "tailwindcss";
 
@@ -74,7 +75,8 @@
 }
 
 :root {
-	font-family: "Inter", "Helvetica Neue", sans-serif;
+	font-family:
+		"Inter", "Neue Haas Grotesk Display Pro", "Helvetica Neue", sans-serif;
 	font-stretch: 95%;
 	font-size: 0.875rem;
 	text-rendering: optimizeLegibility;
