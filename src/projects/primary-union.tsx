@@ -14,23 +14,23 @@ export const PrimaryUnionProject: React.FC<PrimaryUnionProjectProps> = ({
 			<ProjectIntro project={project} />
 			<img
 				className="border border-gray-900 box-shadow my-2 w-full"
-				src="/projects/primary-union/one.png"
+				src="/projects/primary-union/one.avif"
 			/>
 			<img
 				className="border border-gray-900 box-shadow mb-2 w-full"
-				src="/projects/primary-union/two.png"
+				src="/projects/primary-union/two.avif"
 			/>
 			<img
 				className="border border-gray-900 box-shadow mb-2 w-full"
-				src="/projects/primary-union/three.png"
+				src="/projects/primary-union/three.avif"
 			/>
 			<img
 				className="border border-gray-900 box-shadow mb-2 w-full"
-				src="/projects/primary-union/four.png"
+				src="/projects/primary-union/four.avif"
 			/>
 			<img
 				className="border border-gray-900 box-shadow w-full"
-				src="/projects/primary-union/five.png"
+				src="/projects/primary-union/five.avif"
 			/>
 		</div>
 	);
