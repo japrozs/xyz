@@ -73,9 +73,9 @@
 }
 
 :root {
-	font-family: "Univers-next";
+	font-family: "Inter";
 	font-stretch: 95%;
-	font-size: 1rem;
+	font-size: 0.95rem;
 	text-rendering: optimizeLegibility;
 	font-weight: 500;
 	background-color: #000;
