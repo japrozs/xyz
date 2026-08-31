@@ -75,8 +75,7 @@
 }
 
 :root {
-	font-family:
-		"Inter", "Neue Haas Grotesk Display Pro", "Helvetica Neue", sans-serif;
+	font-family: "Inter";
 	font-stretch: 95%;
 	font-size: 0.875rem;
 	text-rendering: optimizeLegibility;
