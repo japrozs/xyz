@@ -20,7 +20,8 @@ export const projects: Project[] = [
 		name: "KREED",
 		year: "2026",
 		role: "Creative + Design",
-		description: "album cover",
+		description:
+			'Visual identity and cover artwork for atlanta rapper Kreed\'s forthcoming single "Topsy Turvy" scheduled for release in late 2026.',
 		link: "https://example.com",
 		component: KreedProject,
 	},
@@ -30,7 +31,7 @@ export const projects: Project[] = [
 		year: "2026",
 		role: "Brand Design",
 		description:
-			"a short description of what this project was about, what problem it solved, and your role in it.",
+			"End-to-end creative direction and visual identity development for Primary Union, a streetwear brand built from the ground up. The project encompasses logo and identity design, color systems, art direction, fashion design, brand aesthetics, and a fully responsive digital experience across desktop and mobile.",
 		link: "https://example.com",
 		component: PrimaryUnionProject,
 	},
@@ -40,7 +41,7 @@ export const projects: Project[] = [
 		year: "2026",
 		role: "Web Design",
 		description:
-			"another project description goes here explaining the context and outcome.",
+			"Product design and web development for Senna, a unified document search platform that brings files from multiple cloud providers into one streamlined, centralized search experience.",
 		link: "https://example.com",
 		component: SennaProject,
 	},
@@ -50,7 +51,7 @@ export const projects: Project[] = [
 		year: "2025",
 		role: "Graphic Design",
 		description:
-			"description of the third project, what it involved, and key takeaways.",
+			'Graphic direction for FTR ["Fuck the Rules"], the visual campaign extension of streetwear label Primary Union, featuring a series of dystopian graphics and posters developed across the brand’s digital ecosystem.',
 		link: "https://example.com",
 		component: FTRProject,
 	},

@@ -15,14 +15,16 @@ export const ProjectIntro: React.FC<ProjectIntroProps> = ({ project }) => {
 			<p className="leading-relaxed text-gray-300">
 				{project.description}
 			</p>
-			{/* <a
-				href={project.link}
-				target="_blank"
-				rel="noopener noreferrer"
-				className="underline text-gray-400 mt-3 inline-block hover:text-gray-200"
-			>
-				view project →
-			</a> */}
+			{/* {project.link !== "" && (
+				<a
+					href={project.link}
+					target="_blank"
+					rel="noopener noreferrer"
+					className="underline text-gray-400 mt-3 inline-block hover:text-gray-200"
+				>
+					view project →
+				</a>
+			)} */}
 		</div>
 	);
 };
