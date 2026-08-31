@@ -62,9 +62,15 @@ export default function Home() {
 											: ""
 									}`}
 								>
-									<td className="py-1">{project.name}</td>
-									<td className="py-1">{project.role}</td>
-									<td className="py-1">{project.year}</td>
+									<td className="py-[0.1rem]">
+										{project.name}
+									</td>
+									<td className="py-[0.1rem]">
+										{project.role}
+									</td>
+									<td className="py-[0.1rem]">
+										{project.year}
+									</td>
 								</tr>
 							))}
 						</tbody>
