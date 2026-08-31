@@ -1,0 +1,102 @@
+@import url("https://fonts.cdnfonts.com/css/menlo");
+@import url("https://rsms.me/inter/inter.css");
+@import "tailwindcss";
+
+@theme {
+	--color-primary-color: #000;
+	--size-tiny: "0.89rem";
+	--size-smol: "0.95rem";
+}
+
+*:focus-visible {
+	outline: 1.5px solid #66ccff;
+	outline-offset: 0px;
+}
+
+::selection {
+	background: #222;
+	text-shadow: none;
+}
+
+::-moz-selection {
+	background: #222;
+	text-shadow: none;
+}
+
+@font-face {
+	font-family: "Univers";
+	font-weight: normal;
+	src: url("/fonts/univers-regular.ttf");
+}
+
+@font-face {
+	font-family: "Univers-next";
+	font-weight: 450;
+	src: url("/fonts/univers-next-regular.woff2");
+}
+
+@font-face {
+	font-family: "Univers";
+	font-weight: bold;
+	src: url("/fonts/univers-bold.ttf");
+}
+
+@font-face {
+	font-family: "Univers";
+	font-stretch: condensed;
+	font-weight: bold;
+	src: url("/fonts/univers-cn-bold.ttf");
+}
+
+@font-face {
+	font-family: "Univers";
+	font-stretch: condensed;
+	src: url("/fonts/univers-cn-rg.ttf");
+}
+
+@font-face {
+	font-family: "Univers";
+	font-weight: lighter;
+	src: url("/fonts/univers-light.ttf");
+}
+
+@font-face {
+	font-family: "Berkeley mono";
+	font-weight: normal;
+	src: url("/fonts/berkeley-mono-regular.woff2");
+}
+
+@font-face {
+	font-family: "Berkeley mono";
+	font-weight: bold;
+	src: url("/fonts/berkeley-mono-bold.woff2");
+}
+
+:root {
+	font-family: "Univers-next";
+	font-stretch: 95%;
+	font-size: 1rem;
+	text-rendering: optimizeLegibility;
+	font-weight: 500;
+	background-color: #000;
+}
+
+.menlo {
+	font-family: "Menlo";
+}
+.mono {
+	font-family: "Berkeley Mono";
+}
+
+.blue {
+	color: #2d6cdf;
+}
+input,
+.modal,
+.box-shadow {
+	box-shadow: 2px 2px #111;
+}
+
+.inter {
+	font-family: "Inter";
+}
