@@ -88,7 +88,7 @@ export default function Home() {
 				<div className="text-[0.95rem] fixed inset-0 z-50 bg-black p-2 md:hidden overflow-y-auto">
 					<IoCloseOutline
 						onClick={() => setSelected(null)}
-						className="text-gray-500 text-xl flex mb-1 ml-auto mr-0"
+						className="text-gray-500 text-2xl flex mb-1 ml-auto mr-0"
 					/>
 					<selected.component project={selected} />
 				</div>
