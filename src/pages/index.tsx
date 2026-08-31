@@ -83,7 +83,7 @@ export default function Home() {
 						<selected.component project={selected} />
 					) : (
 						<p className="text-gray-500 text-[0.95rem]">
-							select a project to see details
+							{/* select a project to see details */}
 						</p>
 					)}
 				</div>
