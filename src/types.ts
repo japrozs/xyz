@@ -21,7 +21,7 @@ export const projects: Project[] = [
 		year: "2026",
 		role: "Creative + Design",
 		description:
-			'Visual identity and cover artwork for atlanta artist Kreed\'s forthcoming single "Topsy Turvey" scheduled for release in late 2026.',
+			'Visual identity and cover artwork for Atlanta artist Kreed\'s forthcoming single "Topsy Turvey" scheduled for release in late 2026.',
 		link: "https://example.com",
 		component: KreedProject,
 	},
