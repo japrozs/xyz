@@ -8,7 +8,7 @@ interface ProjectIntroProps {
 export const ProjectIntro: React.FC<ProjectIntroProps> = ({ project }) => {
 	return (
 		<div>
-			<p className="mb-1 text-base"> {project.name} </p>
+			<p className="mb-1 text-base font-medium"> {project.name} </p>
 			<p className="mb-2 text-gray-500">
 				{project.year} · {project.role}
 			</p>
