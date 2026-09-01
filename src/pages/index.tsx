@@ -48,7 +48,9 @@ export default function Home() {
 							<tr className="text-gray-500">
 								<th className="pb-1 font-normal">project</th>
 								<th className="pb-1 font-normal">role</th>
-								<th className="pb-1 font-normal">year</th>
+								<th className="pb-1 font-normal text-right md:text-left">
+									year
+								</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -68,7 +70,7 @@ export default function Home() {
 									<td className="py-[0.1rem]">
 										{project.role}
 									</td>
-									<td className="py-[0.1rem]">
+									<td className="py-[0.1rem] text-right md:text-left">
 										{project.year}
 									</td>
 								</tr>
