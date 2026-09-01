@@ -14,7 +14,7 @@ export default function Home() {
 	}, []);
 
 	return (
-		<div className="py-1.5 px-3 max-w-[1600px] mx-auto -dvh flex flex-col bg-black text-gray-200">
+		<div className="py-1 px-2 max-w-[1600px] mx-auto h-dvh flex flex-col bg-black text-gray-200">
 			<div className="flex flex-row items-center pb-1">
 				<p className="menlo text-white flex items-center">
 					<img
@@ -86,8 +86,8 @@ export default function Home() {
 							{images.map((img) => (
 								<img
 									key={img.url}
-									// className="aspect-square object-cover cursor-pointer"
-									className="aspect-square object-cover grayscale hover:grayscale-0 cursor-pointer"
+									className="aspect-square object-cover cursor-pointer"
+									// className="aspect-square object-cover grayscale hover:grayscale-0 cursor-pointer"
 									src={img.url}
 									onClick={() => {
 										const match = projects.find(
