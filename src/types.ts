@@ -16,7 +16,7 @@ export type Project = {
 
 export const projects: Project[] = [
 	{
-		id: "kreed-topsy-turvy",
+		id: "kreed",
 		name: "KREED",
 		year: "2026",
 		role: "Creative + Design",
@@ -81,4 +81,27 @@ export const gifUrls = [
 	"https://cyber.dabamos.de/88x31/propaganda.gif",
 	"https://cyber.dabamos.de/88x31/shkolar-88x31-2.gif",
 	"https://cyber.dabamos.de/88x31/submit25free01.gif",
+];
+
+export interface AboutImage {
+	url: string;
+	projectId: string; // should match a Project's id
+}
+
+export const images: AboutImage[] = [
+	{ url: "/mosaic/one.png", projectId: "kreed" },
+	{ url: "/mosaic/two.png", projectId: "primary-union" },
+	{ url: "/mosaic/three.png", projectId: "ftr" },
+	{ url: "/mosaic/four.png", projectId: "ftr" },
+	{ url: "/mosaic/twelve.png", projectId: "ftr" },
+	{ url: "/mosaic/six.png", projectId: "ftr" },
+	{ url: "/mosaic/seven.png", projectId: "ftr" },
+	{ url: "/mosaic/eight.png", projectId: "senna" },
+	{ url: "/mosaic/nine.png", projectId: "ftr" },
+	{ url: "/mosaic/ten.png", projectId: "kreed" },
+	{ url: "/mosaic/eleven.png", projectId: "primary-union" },
+	{ url: "/mosaic/thirteen.png", projectId: "ftr" },
+	{ url: "/mosaic/five.png", projectId: "primary-union" },
+	{ url: "/mosaic/fourteen.png", projectId: "ftr" },
+	{ url: "/mosaic/fifteen.png", projectId: "primary-union" },
 ];

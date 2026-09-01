@@ -1,6 +1,6 @@
 "use client";
 
-import { gifUrls, Project, projects } from "@/types";
+import { gifUrls, images, Project, projects } from "@/types";
 import { useEffect, useState } from "react";
 import { IoCloseOutline } from "react-icons/io5";
 
@@ -82,9 +82,22 @@ export default function Home() {
 					{selected ? (
 						<selected.component project={selected} />
 					) : (
-						<p className="text-gray-500 text-[0.95rem]">
-							{/* select a project to see details */}
-						</p>
+						<div className="grid grid-cols-5 gap-1 max-w-lg mx-auto">
+							{images.map((img) => (
+								<img
+									key={img.url}
+									// className="aspect-square object-cover cursor-pointer"
+									className="aspect-square object-cover grayscale hover:grayscale-0 cursor-pointer"
+									src={img.url}
+									onClick={() => {
+										const match = projects.find(
+											(p) => p.id === img.projectId,
+										);
+										if (match) setSelected(match);
+									}}
+								/>
+							))}
+						</div>
 					)}
 				</div>
 			</div>
