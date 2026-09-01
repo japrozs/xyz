@@ -1,15 +1,19 @@
 import { ProjectIntro } from "@/components/project-intro";
 import { Project } from "@/types";
-import React from "react";
+import React, { Dispatch, SetStateAction } from "react";
 
 interface FTRProjectProps {
 	project: Project;
+	setSelected: Dispatch<SetStateAction<Project | null>>;
 }
 
-export const FTRProject: React.FC<FTRProjectProps> = ({ project }) => {
+export const FTRProject: React.FC<FTRProjectProps> = ({
+	project,
+	setSelected,
+}) => {
 	return (
 		<div>
-			<ProjectIntro project={project} />
+			<ProjectIntro project={project} setSelected={setSelected} />
 			<img
 				className="border border-gray-900 box-shadow my-2 w-full"
 				src="/projects/ftr/one.avif"

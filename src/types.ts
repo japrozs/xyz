@@ -1,3 +1,4 @@
+import { Dispatch, SetStateAction } from "react";
 import { FTRProject } from "./projects/ftr";
 import { KreedProject } from "./projects/kreed";
 import { Manifesto } from "./projects/manifesto";
@@ -11,7 +12,10 @@ export type Project = {
 	role: string;
 	description: string;
 	link: string;
-	component: React.FC<{ project: Project }>;
+	component: React.FC<{
+		project: Project;
+		setSelected: Dispatch<SetStateAction<Project | null>>;
+	}>;
 };
 
 export const projects: Project[] = [

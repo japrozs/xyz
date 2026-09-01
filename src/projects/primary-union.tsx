@@ -1,17 +1,19 @@
 import { ProjectIntro } from "@/components/project-intro";
 import { Project } from "@/types";
-import React from "react";
+import React, { Dispatch, SetStateAction } from "react";
 
 interface PrimaryUnionProjectProps {
 	project: Project;
+	setSelected: Dispatch<SetStateAction<Project | null>>;
 }
 
 export const PrimaryUnionProject: React.FC<PrimaryUnionProjectProps> = ({
 	project,
+	setSelected,
 }) => {
 	return (
 		<div>
-			<ProjectIntro project={project} />
+			<ProjectIntro project={project} setSelected={setSelected} />
 			<img
 				className="border border-gray-900 box-shadow my-2 w-full"
 				src="/projects/primary-union/one.avif"

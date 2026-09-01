@@ -1,15 +1,19 @@
 import { ProjectIntro } from "@/components/project-intro";
 import { Project } from "@/types";
-import React from "react";
+import React, { Dispatch, SetStateAction } from "react";
 
 interface ManifestoProps {
 	project: Project;
+	setSelected: Dispatch<SetStateAction<Project | null>>;
 }
 
-export const Manifesto: React.FC<ManifestoProps> = ({ project }) => {
+export const Manifesto: React.FC<ManifestoProps> = ({
+	project,
+	setSelected,
+}) => {
 	return (
 		<div>
-			<ProjectIntro project={project} />
+			<ProjectIntro project={project} setSelected={setSelected} />
 			<ul className="mt-1.5 list-disc list-outside pl-5">
 				<li className="pl-1">
 					treat graphics as illustration; not decoration.

@@ -80,7 +80,10 @@ export default function Home() {
 				{/* right half - details, desktop only */}
 				<div className="hidden overflow-x-hidden md:block md:w-1/2 text-sm text-[0.95rem] overflow-y-auto min-h-0">
 					{selected ? (
-						<selected.component project={selected} />
+						<selected.component
+							project={selected}
+							setSelected={setSelected}
+						/>
 					) : (
 						<div className="grid grid-cols-5 gap-1 max-w-lg mx-auto">
 							{images.map((img) => (
@@ -105,11 +108,10 @@ export default function Home() {
 			{/* mobile full-page modal */}
 			{selected && (
 				<div className="text-[0.95rem] fixed inset-0 z-50 bg-black p-2 md:hidden overflow-y-auto">
-					<IoCloseOutline
-						onClick={() => setSelected(null)}
-						className="text-gray-500 text-2xl flex mb-1 ml-auto mr-0"
+					<selected.component
+						project={selected}
+						setSelected={setSelected}
 					/>
-					<selected.component project={selected} />
 				</div>
 			)}
 			<div className="flex items-center justify-center gap-x-3 mt-auto pt-5 mb-2 text-[0.95rem] text-gray-500">
