@@ -56,9 +56,9 @@ export default function Home() {
 								<tr
 									key={project.id}
 									onClick={() => setSelected(project)}
-									className={`cursor-pointer hover:bg-[#070707] ${
+									className={`cursor-pointer hover:bg-[#070707] hover:underline ${
 										selected?.id === project.id
-											? "bg-[#070707]"
+											? "bg-[#070707] underline"
 											: ""
 									}`}
 								>
@@ -86,8 +86,8 @@ export default function Home() {
 							{images.map((img) => (
 								<img
 									key={img.url}
-									className="aspect-square object-cover cursor-pointer"
-									// className="aspect-square object-cover grayscale hover:grayscale-0 cursor-pointer"
+									// className="aspect-square object-cover cursor-pointer"
+									className="aspect-square object-cover grayscale hover:grayscale-0 cursor-pointer"
 									src={img.url}
 									onClick={() => {
 										const match = projects.find(
