@@ -95,7 +95,7 @@ export default function Home() {
 							{images.map((img) => (
 								<img
 									key={img.url}
-									className={`aspect-square object-cover cursor-pointer transition-all duration-200 ${
+									className={`aspect-square object-cover cursor-pointer ${
 										img.projectId === hoveredProjectId
 											? "grayscale-0"
 											: "grayscale hover:grayscale-0"
