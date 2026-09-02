@@ -1,18 +1,17 @@
 "use client";
-
 import { gifUrls, images, Project, projects } from "@/types";
 import { useEffect, useState } from "react";
 import { IoCloseOutline } from "react-icons/io5";
-
 export default function Home() {
 	const [selected, setSelected] = useState<Project | null>(null);
 	const [colorIndex, setColorIndex] = useState<number | null>(null);
-
+	const [hoveredProjectId, setHoveredProjectId] = useState<string | null>(
+		null,
+	);
 	useEffect(() => {
 		// pick the random index only after mount to avoid SSR/client hydration mismatch
 		setColorIndex(Math.floor(Math.random() * gifUrls.length));
 	}, []);
-
 	return (
 		<div className="py-1 px-2 max-w-[1600px] mx-auto h-dvh flex flex-col bg-black text-gray-200">
 			<div className="flex flex-row items-center pb-1">
@@ -58,6 +57,12 @@ export default function Home() {
 								<tr
 									key={project.id}
 									onClick={() => setSelected(project)}
+									onMouseEnter={() =>
+										setHoveredProjectId(project.id)
+									}
+									onMouseLeave={() =>
+										setHoveredProjectId(null)
+									}
 									className={`cursor-pointer hover:bg-[#070707] hover:underline ${
 										selected?.id === project.id
 											? "bg-[#070707] underline"
@@ -78,7 +83,6 @@ export default function Home() {
 						</tbody>
 					</table>
 				</div>
-
 				{/* right half - details, desktop only */}
 				<div className="hidden overflow-x-hidden md:block md:w-1/2 text-sm text-[0.95rem] overflow-y-auto min-h-0">
 					{selected ? (
@@ -91,8 +95,11 @@ export default function Home() {
 							{images.map((img) => (
 								<img
 									key={img.url}
-									// className="aspect-square object-cover cursor-pointer"
-									className="aspect-square object-cover grayscale hover:grayscale-0 cursor-pointer"
+									className={`aspect-square object-cover cursor-pointer transition-all duration-200 ${
+										img.projectId === hoveredProjectId
+											? "grayscale-0"
+											: "grayscale hover:grayscale-0"
+									}`}
 									src={img.url}
 									onClick={() => {
 										const match = projects.find(
@@ -106,7 +113,6 @@ export default function Home() {
 					)}
 				</div>
 			</div>
-
 			{/* mobile full-page modal */}
 			{selected && (
 				<div className="text-[0.95rem] fixed inset-0 z-50 bg-black p-2 md:hidden overflow-y-auto">
