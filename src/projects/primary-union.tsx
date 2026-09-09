@@ -42,12 +42,12 @@ export const PrimaryUnionProject: React.FC<PrimaryUnionProjectProps> = ({
 				className="border border-gray-900 box-shadow mb-2 w-full"
 				src="/projects/primary-union/four.avif"
 			/>
-			<div className="flex items-center mb-2 gap-2">
+			<div className="flex items-center gap-2 mb-2 overflow-hidden">
 				<video
 					ref={(el) => {
 						videoRefs.current[0] = el;
 					}}
-					className="border border-gray-900 shadow-sm w-1/3"
+					className="border border-gray-900 shadow-sm w-1/3 min-w-0"
 					src="/projects/primary-union/six_compressed.mp4"
 					autoPlay
 					loop
@@ -58,7 +58,7 @@ export const PrimaryUnionProject: React.FC<PrimaryUnionProjectProps> = ({
 					ref={(el) => {
 						videoRefs.current[1] = el;
 					}}
-					className="border border-gray-900 shadow-sm w-1/3"
+					className="border border-gray-900 shadow-sm w-1/3 min-w-0"
 					src="/projects/primary-union/seven_compressed.mp4"
 					autoPlay
 					loop
@@ -69,7 +69,7 @@ export const PrimaryUnionProject: React.FC<PrimaryUnionProjectProps> = ({
 					ref={(el) => {
 						videoRefs.current[2] = el;
 					}}
-					className="border border-gray-900 shadow-sm w-1/3"
+					className="border border-gray-900 shadow-sm w-1/3 min-w-0"
 					src="/projects/primary-union/eight_compressed.mp4"
 					autoPlay
 					loop
