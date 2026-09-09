@@ -15,13 +15,15 @@ export default function Home() {
 	return (
 		<div className="py-1 px-2 max-w-[1600px] mx-auto h-dvh flex flex-col bg-black text-gray-200">
 			<div className="flex flex-row items-center pb-1">
-				<p className="menlo text-white flex items-center">
-					<img
-						className="h-4 w-auto mr-2"
+				<p className="menlo text-gray-600 flex items-center gap-x-1.5">
+					<span>$$$</span>
+					{/* <img
+						className="h-4 w-auto ml-1"
 						src="/img-not-found.png"
 						alt=""
-					/>
-					jp singh
+					/>{" "} */}
+					<span className="text-emerald-600 mr-1">jp singh</span>{" "}
+					<span>$$$</span>
 				</p>
 				<p className="ml-auto pt-0.5 text-[0.95rem]">
 					designer in atlanta
@@ -44,7 +46,7 @@ export default function Home() {
 				<div className="w-full md:w-1/2 overflow-y-auto custom-scrollbar">
 					<table className="w-full text-left text-sm text-[0.95rem]">
 						<thead>
-							<tr className="text-gray-500">
+							<tr className="text-gray-600 menlo">
 								<th className="pb-1 font-normal">project</th>
 								<th className="pb-1 font-normal">role</th>
 								<th className="pb-1 font-normal text-right md:text-left">
@@ -122,7 +124,7 @@ export default function Home() {
 					/>
 				</div>
 			)}
-			<div className="flex items-center justify-center gap-x-3 mt-auto pt-5 mb-2 text-[0.95rem] text-gray-500">
+			<div className="menlo flex items-center justify-center gap-x-3 mt-auto pt-5 mb-2 text-[0.95rem] text-gray-500">
 				<a
 					href="mailto:sainijaproz@gmail.com"
 					className="hover:text-gray-300"

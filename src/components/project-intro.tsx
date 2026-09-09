@@ -20,7 +20,7 @@ export const ProjectIntro: React.FC<ProjectIntroProps> = ({
 					className="text-gray-500 text-2xl ml-auto mr-0 hover:text-red-500 cursor-pointer"
 				/>
 			</div>
-			<p className="mb-2 text-gray-500">
+			<p className="mb-2 text-gray-500 menlo">
 				{project.year} · {project.role}
 			</p>
 			<p className="leading-relaxed">{project.description}</p>
