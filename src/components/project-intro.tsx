@@ -15,10 +15,15 @@ export const ProjectIntro: React.FC<ProjectIntroProps> = ({
 		<div>
 			<div className="flex items-center">
 				<p className="mb-1 text-base font-medium"> {project.name} </p>
-				<IoCloseOutline
-					onClick={() => setSelected(null)}
-					className="text-gray-500 text-2xl ml-auto mr-0 hover:text-red-500 cursor-pointer"
-				/>
+				<div className="flex items-center ml-auto mr-0 group cursor-pointer">
+					<p className="text-gray-500 font-medium group-hover:text-red-500">
+						Close
+					</p>
+					<IoCloseOutline
+						onClick={() => setSelected(null)}
+						className="text-gray-500 text-2xl group-hover:text-red-500"
+					/>
+				</div>
 			</div>
 			<p className="mb-2 text-gray-500 menlo">
 				{project.year} · {project.role}

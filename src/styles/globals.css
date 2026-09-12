@@ -10,6 +10,21 @@
 	--size-smol: "0.95rem";
 }
 
+html,
+body,
+* {
+	/* Hide scrollbar for Chrome, Safari, and newer Edge (WebKit) */
+	&::-webkit-scrollbar {
+		display: none !important;
+	}
+
+	/* Hide scrollbar for Firefox (Standard CSS) */
+	scrollbar-width: none !important;
+
+	/* Hide scrollbar for legacy IE and Edge */
+	-ms-overflow-style: none !important;
+}
+
 *:focus-visible {
 	outline: 1.5px solid #66ccff;
 	outline-offset: 0px;
