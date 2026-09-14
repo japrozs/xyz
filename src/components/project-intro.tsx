@@ -13,22 +13,22 @@ export const ProjectIntro: React.FC<ProjectIntroProps> = ({
 }) => {
 	return (
 		<div>
-			<div className="flex items-center">
+			<div className="flex items-center text-white">
 				<p className="mb-1 text-base font-medium"> {project.name} </p>
-				<div className="flex items-center ml-auto mr-0 group cursor-pointer">
+				<div
+					onClick={() => setSelected(null)}
+					className="flex items-center ml-auto mr-0 group cursor-pointer"
+				>
 					<p className="text-gray-500 font-medium group-hover:text-red-500">
 						Close
 					</p>
-					<IoCloseOutline
-						onClick={() => setSelected(null)}
-						className="text-gray-500 text-2xl group-hover:text-red-500"
-					/>
+					<IoCloseOutline className="text-gray-500 text-2xl group-hover:text-red-500" />
 				</div>
 			</div>
 			<p className="mb-2 text-gray-500 menlo">
 				{project.year} · {project.role}
 			</p>
-			<p className="leading-relaxed">{project.description}</p>
+			<p className="leading-relaxed text-white">{project.description}</p>
 			{/* {project.link !== "" && (
 				<a
 					href={project.link}

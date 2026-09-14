@@ -25,7 +25,7 @@ export default function Home() {
 					<span className="text-emerald-600 mr-1">jp singh</span>{" "}
 					<span>$$$</span>
 				</p>
-				<p className="ml-auto pt-0.5 text-[0.95rem]">
+				<p className="ml-auto pt-0.5 text-[0.95rem] text-white">
 					designer in atlanta
 				</p>
 			</div>
@@ -65,7 +65,7 @@ export default function Home() {
 									onMouseLeave={() =>
 										setHoveredProjectId(null)
 									}
-									className={`cursor-pointer hover:bg-[#070707] hover:underline ${
+									className={`text-white cursor-pointer hover:bg-[#070707] hover:underline ${
 										selected?.id === project.id
 											? "bg-[#070707] underline"
 											: ""

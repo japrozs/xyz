@@ -117,12 +117,14 @@ body,
 }
 
 :root {
-	font-family: "Helvetica Neue LT Pro";
+	/* font-family: "Helvetica Neue LT Pro"; */
+	font-family: "Inter";
 	font-stretch: 95%;
 	font-size: 0.875rem;
 	text-rendering: optimizeLegibility;
 	font-weight: 400;
 	background-color: #000;
+	color: #fff;
 }
 
 .menlo {
