@@ -25,7 +25,7 @@ export const ProjectIntro: React.FC<ProjectIntroProps> = ({
 					<IoCloseOutline className="text-gray-500 text-2xl group-hover:text-red-500" />
 				</div>
 			</div>
-			<p className="mb-2 text-gray-500 menlo">
+			<p className="mb-2 text-gray-500">
 				{project.year} · {project.role}
 			</p>
 			<p className="leading-relaxed text-white">{project.description}</p>
