@@ -4,6 +4,7 @@ import { KreedProject } from "./projects/kreed";
 import { Manifesto } from "./projects/manifesto";
 import { PrimaryUnionProject } from "./projects/primary-union";
 import { SennaProject } from "./projects/senna";
+import { KreedProjectFreestyle } from "./projects/kreed-freestyle";
 
 export type Project = {
 	id: string;
@@ -20,8 +21,18 @@ export type Project = {
 
 export const projects: Project[] = [
 	{
+		id: "kreed-freestyle",
+		name: "KREED x Label Ticket Freestyle",
+		year: "2026",
+		role: "Design",
+		description:
+			'Cover artwork design for Atlanta artist Kreed\'s single "Label Ticket Freestyle" scheduled for release in October 2026.',
+		link: "https://example.com",
+		component: KreedProjectFreestyle,
+	},
+	{
 		id: "kreed",
-		name: "KREED",
+		name: "KREED x Topsy Turvy",
 		year: "2026",
 		role: "Creative + Design",
 		description:
