@@ -133,7 +133,7 @@ export default function Home() {
 				</a>
 				<span>·</span>
 				<a
-					href="https://instagram.com/japrozs"
+					href="https://instagram.com/dysleks1k"
 					target="_blank"
 					rel="noopener noreferrer"
 					className="hover:text-gray-300"
