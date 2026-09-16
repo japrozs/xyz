@@ -55,6 +55,13 @@ export default function Home() {
 							</tr>
 						</thead>
 						<tbody>
+							{/* <tr className={`text-gray-500`}>
+								<td className="py-[0.1rem]">????????</td>
+								<td className="py-[0.1rem]">???</td>
+								<td className="py-[0.1rem] text-right md:text-left">
+									????
+								</td>
+							</tr> */}
 							{projects.map((project) => (
 								<tr
 									key={project.id}
