@@ -31,16 +31,6 @@ export const projects: Project[] = [
 		component: KreedProjectFreestyle,
 	},
 	{
-		id: "kreed",
-		name: "KREED x Topsy Turvy",
-		year: "2026",
-		role: "Creative + Design",
-		description:
-			'Visual identity and cover artwork for Atlanta artist Kreed\'s forthcoming single "Topsy Turvy" scheduled for release in late 2026.',
-		link: "https://example.com",
-		component: KreedProject,
-	},
-	{
 		id: "primary-union",
 		name: "Primary Union",
 		year: "2026",
@@ -49,6 +39,16 @@ export const projects: Project[] = [
 			"End-to-end creative direction and visual identity development for Primary Union, a streetwear brand built from the ground up. The project encompasses logo and identity design, color systems, art direction, fashion design, brand aesthetics, and a fully responsive digital experience across desktop and mobile.",
 		link: "https://example.com",
 		component: PrimaryUnionProject,
+	},
+	{
+		id: "kreed",
+		name: "KREED x Topsy Turvy",
+		year: "2026",
+		role: "Creative + Design",
+		description:
+			'Visual identity and cover artwork for Atlanta artist Kreed\'s forthcoming single "Topsy Turvy" scheduled for release in late 2026.',
+		link: "https://example.com",
+		component: KreedProject,
 	},
 	{
 		id: "senna",
