@@ -6,6 +6,7 @@
 
 @theme {
 	--color-primary-color: #000;
+	--color-border-color: oklch(20.8% 0.042 265.755);
 	--size-tiny: "0.89rem";
 	--size-smol: "0.95rem";
 }

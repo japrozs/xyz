@@ -13,8 +13,8 @@ export default function Home() {
 		setColorIndex(Math.floor(Math.random() * gifUrls.length));
 	}, []);
 	return (
-		<div className="py-1 px-2 max-w-[1600px] mx-auto h-dvh flex flex-col bg-black text-gray-200">
-			<div className="flex flex-row items-center pb-1">
+		<div className="max-w-[1600px] mx-auto h-dvh flex flex-col bg-black text-gray-200">
+			<div className="py-1 px-2 flex flex-row items-center pb-1">
 				<p className="menlo text-gray-600 flex items-center gap-x-1.5">
 					<span>$$$</span>
 					{/* <img
@@ -41,27 +41,38 @@ export default function Home() {
 					/>
 				))}
 			</div> */}
-			<div className="flex mt-2.5 gap-x-8 flex-1 min-h-0">
+			<div className="border-t border-border-color flex gap-x-8 flex-1 min-h-0">
 				{/* table - full width on mobile, half width on desktop */}
-				<div className="w-full md:w-1/2 overflow-y-auto custom-scrollbar">
+				<div className="w-full md:w-1/2 pt-1.5 md:border-r md:border-border-color overflow-y-auto custom-scrollbar">
 					<table className="w-full text-left text-sm text-[0.95rem]">
 						<thead>
-							<tr className="text-gray-600 menlo">
-								<th className="pb-1 font-normal">project</th>
-								<th className="pb-1 font-normal">role</th>
-								<th className="pb-1 font-normal text-right md:text-left">
-									year
+							<tr className="border-b border-border-color">
+								<th className="pl-2 pb-1 font-normal">
+									Project
+								</th>
+								<th className="pb-1 font-normal">Role</th>
+								<th className="pr-2 pb-1 font-normal text-right hidden md:table-cell">
+									Year
 								</th>
 							</tr>
 						</thead>
 						<tbody>
-							{/* <tr className={`text-gray-500`}>
-								<td className="py-[0.1rem]">????????</td>
-								<td className="py-[0.1rem]">???</td>
-								<td className="py-[0.1rem] text-right md:text-left">
-									????
+							<tr className={`text-gray-700`}>
+								<td className="pl-2 pt-1 py-[0.1rem]">
+									??????
 								</td>
-							</tr> */}
+								<td className="pt-1 py-[0.1rem]">???</td>
+								<td className="pr-2 pt-1 py-[0.1rem] text-right hidden md:table-cell">
+									In progress
+								</td>
+							</tr>
+							<tr className={`text-gray-700`}>
+								<td className="pl-2 pt-1 py-[0.1rem]">RUB3N</td>
+								<td className="pt-1 py-[0.1rem]">Art</td>
+								<td className="pr-2 pt-1 py-[0.1rem] text-right hidden md:table-cell">
+									In progress
+								</td>
+							</tr>
 							{projects.map((project) => (
 								<tr
 									key={project.id}
@@ -78,13 +89,13 @@ export default function Home() {
 											: ""
 									}`}
 								>
-									<td className="py-[0.1rem]">
+									<td className="pl-2 pt-1 py-[0.1rem]">
 										{project.name}
 									</td>
-									<td className="py-[0.1rem]">
+									<td className="pt-1 py-[0.1rem]">
 										{project.role}
 									</td>
-									<td className="py-[0.1rem] text-right md:text-left">
+									<td className="pr-2 pt-1 py-[0.1rem] text-right hidden md:table-cell">
 										{project.year}
 									</td>
 								</tr>
@@ -93,33 +104,35 @@ export default function Home() {
 					</table>
 				</div>
 				{/* right half - details, desktop only */}
-				<div className="hidden overflow-x-hidden md:block md:w-1/2 text-sm text-[0.95rem] overflow-y-auto min-h-0">
-					{selected ? (
-						<selected.component
-							project={selected}
-							setSelected={setSelected}
-						/>
-					) : (
-						<div className="grid grid-cols-5 gap-1 max-w-lg mx-auto">
-							{images.map((img) => (
-								<img
-									key={img.url}
-									className={`aspect-square object-cover cursor-pointer ${
-										img.projectId === hoveredProjectId
-											? "grayscale-0"
-											: "grayscale hover:grayscale-0"
-									}`}
-									src={img.url}
-									onClick={() => {
-										const match = projects.find(
-											(p) => p.id === img.projectId,
-										);
-										if (match) setSelected(match);
-									}}
-								/>
-							))}
-						</div>
-					)}
+				<div className="hidden pt-2.5 overflow-x-hidden md:flex md:justify-center md:w-1/2 text-sm text-[0.95rem] overflow-y-auto min-h-0">
+					<div className="w-full pr-6">
+						{selected ? (
+							<selected.component
+								project={selected}
+								setSelected={setSelected}
+							/>
+						) : (
+							<div className="grid grid-cols-5 gap-1 max-w-lg mx-auto">
+								{images.map((img) => (
+									<img
+										key={img.url}
+										className={`aspect-square object-cover cursor-pointer ${
+											img.projectId === hoveredProjectId
+												? "grayscale-0"
+												: "grayscale hover:grayscale-0"
+										}`}
+										src={img.url}
+										onClick={() => {
+											const match = projects.find(
+												(p) => p.id === img.projectId,
+											);
+											if (match) setSelected(match);
+										}}
+									/>
+								))}
+							</div>
+						)}
+					</div>
 				</div>
 			</div>
 			{/* mobile full-page modal */}
@@ -131,7 +144,7 @@ export default function Home() {
 					/>
 				</div>
 			)}
-			<div className="flex items-center justify-center gap-x-3 mt-auto pt-5 mb-2 text-[0.95rem] text-gray-500">
+			<div className="border-t border-border-color flex items-center justify-center gap-x-3 mt-auto pt-2 mb-2 text-[0.95rem] text-gray-500">
 				<a
 					href="mailto:sainijaproz@gmail.com"
 					className="hover:text-white"
