@@ -28,6 +28,7 @@ export const Manifesto: React.FC<ManifestoProps> = ({
 				<li className="pl-1">
 					love the game like it already loves u back.
 				</li>
+				<li className="pl-1 text-red-500">fuck the rules.</li>
 			</ul>
 		</div>
 	);

@@ -5,6 +5,7 @@ export default function Document() {
 		<Html lang="en">
 			<Head>
 				<link rel="icon" href="/favicon.ico" />
+				<meta name="theme-color" content="#000" />
 				<title>jp</title>
 			</Head>
 			<body className="antialiased">
