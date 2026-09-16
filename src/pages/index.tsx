@@ -58,18 +58,20 @@ export default function Home() {
 						</thead>
 						<tbody>
 							<tr className={`text-gray-700`}>
-								<td className="pl-2 pt-1 py-[0.1rem]">
+								<td className="pl-2 pt-0.5 py-[0.1rem]">
 									??????
 								</td>
-								<td className="pt-1 py-[0.1rem]">???</td>
-								<td className="pr-2 pt-1 py-[0.1rem] text-right hidden md:table-cell">
+								<td className="pt-0.5 py-[0.1rem]">???</td>
+								<td className="pr-2 pt-0.5 py-[0.1rem] text-right hidden md:table-cell">
 									In progress
 								</td>
 							</tr>
 							<tr className={`text-gray-700`}>
-								<td className="pl-2 pt-1 py-[0.1rem]">RUB3N</td>
-								<td className="pt-1 py-[0.1rem]">Art</td>
-								<td className="pr-2 pt-1 py-[0.1rem] text-right hidden md:table-cell">
+								<td className="pl-2 pt-0.5 py-[0.1rem]">
+									RUB3N
+								</td>
+								<td className="pt-0.5 py-[0.1rem]">Art</td>
+								<td className="pr-2 pt-0.5 py-[0.1rem] text-right hidden md:table-cell">
 									In progress
 								</td>
 							</tr>
@@ -89,13 +91,13 @@ export default function Home() {
 											: ""
 									}`}
 								>
-									<td className="pl-2 pt-1 py-[0.1rem]">
+									<td className="pl-2 pt-0.5 py-[0.1rem]">
 										{project.name}
 									</td>
-									<td className="pt-1 py-[0.1rem]">
+									<td className="pt-0.5 py-[0.1rem]">
 										{project.role}
 									</td>
-									<td className="pr-2 pt-1 py-[0.1rem] text-right hidden md:table-cell">
+									<td className="pr-2 pt-0.5 py-[0.1rem] text-right hidden md:table-cell">
 										{project.year}
 									</td>
 								</tr>
