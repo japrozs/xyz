@@ -124,19 +124,19 @@ export default function Home() {
 					/>
 				</div>
 			)}
-			<div className="menlo flex items-center justify-center gap-x-3 mt-auto pt-5 mb-2 text-[0.95rem] text-gray-500">
+			<div className="flex items-center justify-center gap-x-3 mt-auto pt-5 mb-2 text-[0.95rem] text-gray-500">
 				<a
 					href="mailto:sainijaproz@gmail.com"
-					className="hover:text-gray-300"
+					className="hover:text-white"
 				>
-					sainijaproz@gmail.com
+					email
 				</a>
 				<span>·</span>
 				<a
 					href="https://instagram.com/dysleks1k"
 					target="_blank"
 					rel="noopener noreferrer"
-					className="hover:text-gray-300"
+					className="hover:text-white"
 				>
 					instagram
 				</a>
