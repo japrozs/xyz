@@ -32,7 +32,7 @@ export const projects: Project[] = [
 	},
 	{
 		id: "primary-union",
-		name: "Primary Union",
+		name: "PRIMARY UNION",
 		year: "2026",
 		role: "Brand Design",
 		description:
@@ -72,7 +72,7 @@ export const projects: Project[] = [
 	},
 	{
 		id: "manifesto",
-		name: "Manifesto",
+		name: "MANIFESTO",
 		year: "2025",
 		role: "Philosophy",
 		description: "design fundamentals.",
