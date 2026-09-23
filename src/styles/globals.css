@@ -130,10 +130,10 @@ body,
 :root {
 	/* font-family: "Helvetica Neue LT Pro"; */
 	font-family: "Univers-next";
-	font-stretch: 95%;
+	/* font-stretch: 95%; */
 	font-size: 0.875rem;
 	text-rendering: optimizeLegibility;
-	font-weight: 400;
+	font-weight: 500;
 	background-color: #fff;
 	color: #000;
 }
