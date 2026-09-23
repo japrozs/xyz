@@ -15,23 +15,23 @@ export const KreedProjectFreestyle: React.FC<KreedProjectFreestyleProps> = ({
 		<div>
 			<ProjectIntro project={project} setSelected={setSelected} />
 			<img
-				className="border border-gray-900 box-shadow my-2"
+				className="border border-gray-300 box-shadow my-2"
 				src="/projects/kreed-freestyle/two.avif"
 			/>
 			<img
-				className="border border-gray-900 box-shadow mb-2"
+				className="border border-gray-300 box-shadow mb-2"
 				src="/projects/kreed-freestyle/four.avif"
 			/>
 			<img
-				className="border border-gray-900 box-shadow mb-2"
+				className="border border-gray-300 box-shadow mb-2"
 				src="/projects/kreed-freestyle/five.avif"
 			/>
 			<img
-				className="border border-gray-900 box-shadow my-2"
+				className="border border-gray-300 box-shadow my-2"
 				src="/projects/kreed-freestyle/one.avif"
 			/>
 			<img
-				className="border border-gray-900 box-shadow mb-2"
+				className="border border-gray-300 box-shadow mb-2"
 				src="/projects/kreed-freestyle/three.avif"
 			/>
 		</div>

@@ -27,21 +27,21 @@ export const FTRProject: React.FC<FTRProjectProps> = ({
 		<div>
 			<ProjectIntro project={project} setSelected={setSelected} />
 			<img
-				className="border border-gray-900 box-shadow my-2 w-full"
+				className="border border-gray-300 box-shadow my-2 w-full"
 				src="/projects/ftr/one.avif"
 			/>
 			<div className="flex items-center gap-2">
 				<img
-					className="border border-gray-900 box-shadow w-1/2"
+					className="border border-gray-300 box-shadow w-1/2"
 					src="/projects/ftr/two.avif"
 				/>
 				<img
-					className="border border-gray-900 box-shadow w-1/2"
+					className="border border-gray-300 box-shadow w-1/2"
 					src="/projects/ftr/three.avif"
 				/>
 			</div>
 			<img
-				className="border border-gray-900 box-shadow my-2 w-full"
+				className="border border-gray-300 box-shadow my-2 w-full"
 				src="/projects/ftr/five.avif"
 			/>
 			<div className="flex items-center gap-2 mb-2 overflow-hidden">
@@ -49,7 +49,7 @@ export const FTRProject: React.FC<FTRProjectProps> = ({
 					ref={(el) => {
 						videoRefs.current[0] = el;
 					}}
-					className="border border-gray-900 shadow-sm w-1/3 min-w-0"
+					className="border border-gray-300 shadow-sm w-1/3 min-w-0"
 					src="/projects/primary-union/six_compressed.mp4"
 					autoPlay
 					loop
@@ -60,7 +60,7 @@ export const FTRProject: React.FC<FTRProjectProps> = ({
 					ref={(el) => {
 						videoRefs.current[1] = el;
 					}}
-					className="border border-gray-900 shadow-sm w-1/3 min-w-0"
+					className="border border-gray-300 shadow-sm w-1/3 min-w-0"
 					src="/projects/primary-union/seven_compressed.mp4"
 					autoPlay
 					loop
@@ -71,7 +71,7 @@ export const FTRProject: React.FC<FTRProjectProps> = ({
 					ref={(el) => {
 						videoRefs.current[2] = el;
 					}}
-					className="border border-gray-900 shadow-sm w-1/3 min-w-0"
+					className="border border-gray-300 shadow-sm w-1/3 min-w-0"
 					src="/projects/primary-union/eight_compressed.mp4"
 					autoPlay
 					loop
@@ -80,7 +80,7 @@ export const FTRProject: React.FC<FTRProjectProps> = ({
 				/>
 			</div>
 			<img
-				className="border border-gray-900 box-shadow my-2 w-full"
+				className="border border-gray-300 box-shadow my-2 w-full"
 				src="/projects/ftr/four.avif"
 			/>
 		</div>

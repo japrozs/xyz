@@ -52,7 +52,7 @@ export const projects: Project[] = [
 	},
 	{
 		id: "senna",
-		name: "Senna",
+		name: "SENNA",
 		year: "2026",
 		role: "Web Design",
 		description:

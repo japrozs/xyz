@@ -15,11 +15,11 @@ export const SennaProject: React.FC<SennaProjectProps> = ({
 		<div>
 			<ProjectIntro project={project} setSelected={setSelected} />
 			<img
-				className="border border-gray-900 box-shadow my-2"
+				className="border border-gray-300 box-shadow my-2"
 				src="/projects/senna/one.png"
 			/>
 			<img
-				className="border border-gray-900 box-shadow"
+				className="border border-gray-300 box-shadow"
 				src="/projects/senna/two.png"
 			/>
 		</div>

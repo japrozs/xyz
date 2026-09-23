@@ -27,19 +27,19 @@ export const PrimaryUnionProject: React.FC<PrimaryUnionProjectProps> = ({
 		<div>
 			<ProjectIntro project={project} setSelected={setSelected} />
 			<img
-				className="border border-gray-900 box-shadow my-2 w-full"
+				className="border border-gray-300 box-shadow my-2 w-full"
 				src="/projects/primary-union/one.avif"
 			/>
 			<img
-				className="border border-gray-900 box-shadow mb-2 w-full"
+				className="border border-gray-300 box-shadow mb-2 w-full"
 				src="/projects/primary-union/two.avif"
 			/>
 			<img
-				className="border border-gray-900 box-shadow mb-2 w-full"
+				className="border border-gray-300 box-shadow mb-2 w-full"
 				src="/projects/primary-union/three.avif"
 			/>
 			<img
-				className="border border-gray-900 box-shadow mb-2 w-full"
+				className="border border-gray-300 box-shadow mb-2 w-full"
 				src="/projects/primary-union/four.avif"
 			/>
 			<div className="flex items-center gap-2 mb-2 overflow-hidden">

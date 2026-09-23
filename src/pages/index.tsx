@@ -13,19 +13,19 @@ export default function Home() {
 		setColorIndex(Math.floor(Math.random() * gifUrls.length));
 	}, []);
 	return (
-		<div className="max-w-[1600px] mx-auto h-dvh flex flex-col bg-black text-gray-200">
+		<div className="max-w-[1600px] mx-auto h-dvh flex flex-col">
 			<div className="py-1 px-2 flex flex-row items-center pb-1">
-				<p className="menlo text-gray-600 flex items-center gap-x-1.5">
+				<p className="menlo text-gray-400 flex items-center gap-x-1.5">
 					<span>$$$</span>
 					{/* <img
 						className="h-4 w-auto ml-1"
 						src="/img-not-found.png"
 						alt=""
 					/>{" "} */}
-					<span className="text-emerald-600 mr-1">jp singh</span>{" "}
+					<span className="text-blue-500 mr-1">jp singh</span>{" "}
 					<span>$$$</span>
 				</p>
-				<p className="ml-auto pt-0.5 text-[0.95rem] text-white">
+				<p className="ml-auto pt-0.5 text-[0.95rem]">
 					designer in atlanta
 				</p>
 			</div>
@@ -57,7 +57,7 @@ export default function Home() {
 							</tr>
 						</thead>
 						<tbody>
-							<tr className={`text-gray-700`}>
+							<tr className={`text-gray-400`}>
 								<td className="pl-2 pt-0.5 py-[0.1rem]">
 									??????
 								</td>
@@ -66,7 +66,7 @@ export default function Home() {
 									In progress
 								</td>
 							</tr>
-							<tr className={`text-gray-700`}>
+							<tr className={`text-gray-400`}>
 								<td className="pl-2 pt-0.5 py-[0.1rem]">
 									RUB3N
 								</td>
@@ -85,9 +85,9 @@ export default function Home() {
 									onMouseLeave={() =>
 										setHoveredProjectId(null)
 									}
-									className={`text-white cursor-pointer hover:bg-[#070707] hover:underline ${
+									className={`cursor-pointer hover:bg-gray-100 hover:underline ${
 										selected?.id === project.id
-											? "bg-[#070707] underline"
+											? "bg-gray-100 underline"
 											: ""
 									}`}
 								>
@@ -121,7 +121,7 @@ export default function Home() {
 										className={`aspect-square object-cover cursor-pointer ${
 											img.projectId === hoveredProjectId
 												? "grayscale-0"
-												: "grayscale hover:grayscale-0"
+												: "grayscale-0 hover:grayscale-0"
 										}`}
 										src={img.url}
 										onClick={() => {
