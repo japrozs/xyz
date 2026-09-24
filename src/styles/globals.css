@@ -34,13 +34,13 @@ body,
 }
 
 ::selection {
-	background: #222;
-	text-shadow: none;
+	background-color: oklch(68.5% 0.169 237.323 / 15%);
+	color: inherit;
 }
 
 ::-moz-selection {
-	background: #222;
-	text-shadow: none;
+	background-color: oklch(68.5% 0.169 237.323 / 15%);
+	color: inherit;
 }
 
 @font-face {
@@ -130,7 +130,7 @@ body,
 :root {
 	/* font-family: "Helvetica Neue LT Pro"; */
 	font-family: "Univers-next";
-	/* font-stretch: 95%; */
+	font-stretch: 99%;
 	font-size: 0.875rem;
 	text-rendering: optimizeLegibility;
 	font-weight: 500;

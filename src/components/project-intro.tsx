@@ -19,8 +19,10 @@ export const ProjectIntro: React.FC<ProjectIntroProps> = ({
 					onClick={() => setSelected(null)}
 					className="flex items-center ml-auto mr-0 group cursor-pointer"
 				>
-					<p className="text-red-500 font-medium">Close</p>
-					<IoCloseOutline className="text-2xl text-red-500" />
+					<p className="mt-0.5 text-red-500 font-medium hover:underline">
+						Close [x]
+					</p>
+					{/* <IoCloseOutline className="text-2xl text-red-500" /> */}
 				</div>
 			</div>
 			<p className="mb-2 text-gray-500">

@@ -15,18 +15,20 @@ export default function Home() {
 	return (
 		<div className="max-w-[1600px] mx-auto h-dvh flex flex-col">
 			<div className="py-1 px-2 flex flex-row items-center pb-1">
-				<p className="menlo text-gray-400 flex items-center gap-x-1.5">
-					<span>$$$</span>
+				<p className="text-gray-400 flex items-center gap-x-1.5">
+					{/* <span className="menlo">$$$</span> */}
 					{/* <img
 						className="h-4 w-auto ml-1"
 						src="/img-not-found.png"
 						alt=""
 					/>{" "} */}
-					<span className="text-blue-500 mr-1">jp singh</span>{" "}
-					<span>$$$</span>
+					<span className="bg-sky-600 text-white mr-1 pt-0.5">
+						JP Singh
+					</span>{" "}
+					{/* <span className="menlo">$$$</span> */}
 				</p>
-				<p className="ml-auto pt-0.5 text-[0.95rem]">
-					designer in atlanta
+				<p className="ml-auto pt-1 text-[0.95rem]">
+					Designer in Atlanta
 				</p>
 			</div>
 			{/* <div className="flex items-center gap-x-1 justify-between">
@@ -41,11 +43,12 @@ export default function Home() {
 					/>
 				))}
 			</div> */}
-			<div className="border-t border-border-color flex gap-x-8 flex-1 min-h-0">
+			<div className="border-t border-border-color flex flex-col md:flex-row gap-x-8 flex-1 min-h-0 overflow-y-auto md:overflow-visible">
 				{/* table - full width on mobile, half width on desktop */}
-				<div className="w-full md:w-1/2 pt-1.5 md:border-r md:border-border-color overflow-y-auto custom-scrollbar">
+				<div className="w-full md:w-1/2 pt-1.5 md:border-r md:border-border-color md:overflow-y-auto custom-scrollbar">
+					<p className="pl-2 text-gray-400">Selected Work :–</p>
 					<table className="w-full text-left text-sm text-[0.95rem]">
-						<thead>
+						{/* <thead>
 							<tr className="border-b border-border-color">
 								<th className="pl-2 pb-1 font-normal">
 									Project
@@ -55,9 +58,9 @@ export default function Home() {
 									Year
 								</th>
 							</tr>
-						</thead>
+						</thead> */}
 						<tbody>
-							<tr className={`text-gray-400`}>
+							{/* <tr className={`text-gray-400`}>
 								<td className="pl-2 pt-0.5 py-[0.1rem]">
 									??????
 								</td>
@@ -74,7 +77,7 @@ export default function Home() {
 								<td className="pr-2 pt-0.5 py-[0.1rem] text-right hidden md:table-cell">
 									In progress
 								</td>
-							</tr>
+							</tr> */}
 							{projects.map((project) => (
 								<tr
 									key={project.id}
@@ -85,9 +88,9 @@ export default function Home() {
 									onMouseLeave={() =>
 										setHoveredProjectId(null)
 									}
-									className={`cursor-pointer hover:bg-gray-100 hover:underline ${
+									className={`cursor-pointer hover:bg-gray-100 ${
 										selected?.id === project.id
-											? "bg-gray-100 underline"
+											? "bg-gray-100"
 											: ""
 									}`}
 								>
@@ -104,6 +107,13 @@ export default function Home() {
 							))}
 						</tbody>
 					</table>
+					<p className="pl-2 text-gray-400 mt-10">About :–</p>
+					<p className="pl-2">
+						Japroz (JP) Singh is a multidisciplinary creative based
+						in Atlanta who works between fashion, music, design, and
+						culture. He works with brands, artists, musicians, and
+						design teams internationally.
+					</p>
 				</div>
 				{/* right half - details, desktop only */}
 				<div className="hidden pt-2.5 overflow-x-hidden md:flex md:justify-center md:w-1/2 text-sm text-[0.95rem] overflow-y-auto min-h-0">
@@ -137,9 +147,29 @@ export default function Home() {
 					</div>
 				</div>
 			</div>
+			{/* image grid, mobile only — sits just above the footer */}
+			<div className="max-w-lg mx-auto grid grid-cols-5 gap-1 p-2 md:hidden">
+				{images.map((img) => (
+					<img
+						key={img.url}
+						className={`aspect-square object-cover cursor-pointer ${
+							img.projectId === hoveredProjectId
+								? "grayscale-0"
+								: "grayscale-0 hover:grayscale-0"
+						}`}
+						src={img.url}
+						onClick={() => {
+							const match = projects.find(
+								(p) => p.id === img.projectId,
+							);
+							if (match) setSelected(match);
+						}}
+					/>
+				))}
+			</div>
 			{/* mobile full-page modal */}
 			{selected && (
-				<div className="text-[0.95rem] fixed inset-0 z-50 bg-black p-2 md:hidden overflow-y-auto">
+				<div className="text-[0.95rem] fixed inset-0 z-50 bg-white p-2 md:hidden overflow-y-auto">
 					<selected.component
 						project={selected}
 						setSelected={setSelected}
@@ -147,20 +177,15 @@ export default function Home() {
 				</div>
 			)}
 			<div className="border-t border-border-color flex items-center justify-center gap-x-3 mt-auto pt-2 mb-2 text-[0.95rem] text-gray-500">
-				<a
-					href="mailto:sainijaproz@gmail.com"
-					className="hover:text-white"
-				>
-					email
-				</a>
+				<p>sainijaproz [at] gmail.com</p>
 				<span>·</span>
 				<a
 					href="https://instagram.com/dysleks1k"
 					target="_blank"
 					rel="noopener noreferrer"
-					className="hover:text-white"
+					className=""
 				>
-					instagram
+					Instagram
 				</a>
 			</div>
 		</div>
