@@ -176,8 +176,8 @@ export default function Home() {
 					/>
 				</div>
 			)}
-			<div className="border-t border-border-color flex items-center justify-center gap-x-3 mt-auto pt-2 mb-2 text-[0.95rem] text-gray-500">
-				<p>sainijaproz [at] gmail.com</p>
+			<div className="border-t border-border-color flex items-center justify-center gap-x-3 mt-auto pt-2 mb-2 text-[0.95rem]">
+				<p>sainijaproz@gmail.com</p>
 				<span>·</span>
 				<a
 					href="https://instagram.com/dysleks1k"
