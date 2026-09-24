@@ -22,7 +22,7 @@ export default function Home() {
 						src="/img-not-found.png"
 						alt=""
 					/>{" "} */}
-					<span className="bg-sky-600 text-white mr-1 pt-0.5">
+					<span className="bg-[#cfff04] text-black mr-1 pt-0.5">
 						JP Singh
 					</span>{" "}
 					{/* <span className="menlo">$$$</span> */}
