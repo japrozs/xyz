@@ -169,7 +169,7 @@ export default function Home() {
 			</div>
 			{/* mobile full-page modal */}
 			{selected && (
-				<div className="text-[0.95rem] fixed inset-0 z-50 bg-white p-2 md:hidden overflow-y-auto">
+				<div className="text-[0.95rem] fixed inset-0 z-50 bg-white/96 p-2 md:hidden overflow-y-auto">
 					<selected.component
 						project={selected}
 						setSelected={setSelected}
