@@ -6,9 +6,11 @@ export default function Document() {
 			<Head>
 				<link rel="icon" href="/favicon.ico" />
 				<meta name="theme-color" content="#000" />
-				<meta property="og:image" content="" />
-				<meta property="og:image:width" content="0" />
-				<meta property="og:image:height" content="0" />
+				<meta property="og:title" content="jp" />
+				<meta property="og:image" content="/og-image.png" />
+				<meta property="og:url" content="https://xyz.japroz.me/" />
+				<meta property="og:type" content="website" />
+
 				<title>jp</title>
 			</Head>
 			<body className="antialiased">
