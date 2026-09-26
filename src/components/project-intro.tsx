@@ -20,7 +20,7 @@ export const ProjectIntro: React.FC<ProjectIntroProps> = ({
 					className="flex items-center ml-auto mr-0 group cursor-pointer"
 				>
 					<p className="mt-0.5 text-red-500 font-medium hover:underline">
-						Close [x]
+						Close [×]
 					</p>
 					{/* <IoCloseOutline className="text-2xl text-red-500" /> */}
 				</div>

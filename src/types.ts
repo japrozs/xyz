@@ -22,7 +22,7 @@ export type Project = {
 export const projects: Project[] = [
 	{
 		id: "kreed-freestyle",
-		name: "KREED x Label Ticket Freestyle",
+		name: "KREED × Label Ticket Freestyle",
 		year: "2026",
 		role: "Design",
 		description:
@@ -42,7 +42,7 @@ export const projects: Project[] = [
 	},
 	{
 		id: "kreed",
-		name: "KREED x Topsy Turvy",
+		name: "KREED × Topsy Turvy",
 		year: "2026",
 		role: "Creative + Design",
 		description:
