@@ -12,6 +12,28 @@ export default function Home() {
 		// pick the random index only after mount to avoid SSR/client hydration mismatch
 		setColorIndex(Math.floor(Math.random() * gifUrls.length));
 	}, []);
+
+	const [atlantaTime, setAtlantaTime] = useState<string>("");
+	useEffect(() => {
+		// pick the random index only after mount to avoid SSR/client hydration mismatch
+		setColorIndex(Math.floor(Math.random() * gifUrls.length));
+	}, []);
+	useEffect(() => {
+		const formatTime = () =>
+			new Intl.DateTimeFormat("en-US", {
+				timeZone: "America/New_York",
+				hour: "numeric",
+				minute: "2-digit",
+				hour12: true,
+			})
+				.format(new Date())
+				.replace(" ", "");
+		setAtlantaTime(formatTime());
+		const interval = setInterval(() => {
+			setAtlantaTime(formatTime());
+		}, 1000);
+		return () => clearInterval(interval);
+	}, []);
 	return (
 		<div className="max-w-[1600px] mx-auto h-dvh flex flex-col">
 			<div className="py-1 px-2 flex flex-row items-center pb-1">
@@ -28,8 +50,8 @@ export default function Home() {
 					</span>{" "}
 					{/* <span className="menlo">$$$</span> */}
 				</p>
-				<p className="ml-auto pt-1 text-[0.95rem]">
-					Designer in Atlanta
+				<p className="ml-auto pt-0.5 text-[0.95rem]">
+					Atlanta — {atlantaTime}
 				</p>
 			</div>
 			{/* <div className="flex items-center gap-x-1 justify-between">
@@ -110,10 +132,13 @@ export default function Home() {
 					</table>
 					<p className="pl-2 text-gray-400 mt-10">About :–</p>
 					<p className="pl-2">
-						Japroz (JP) Singh is a multidisciplinary creative based
-						in Atlanta who works between fashion, music, design, and
-						culture. He works with brands, artists, musicians, and
-						design teams internationally.
+						Japroz (JP) Singh is a{" "}
+						<span className="line-through">
+							multidisciplinary creative
+						</span>{" "}
+						dude based in Atlanta who works between fashion, music,
+						design, and culture. He works with brands, artists,
+						musicians, and design teams internationally.
 					</p>
 				</div>
 				{/* right half - details, desktop only */}
