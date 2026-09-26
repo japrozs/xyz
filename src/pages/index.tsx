@@ -136,7 +136,7 @@ export default function Home() {
 						<span className="line-through">
 							multidisciplinary creative
 						</span>{" "}
-						dude based in Atlanta who works between fashion, music,
+						human based in Atlanta who works between fashion, music,
 						design, and culture. He works with brands, artists,
 						musicians, and design teams internationally.
 					</p>
