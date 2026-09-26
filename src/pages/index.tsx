@@ -125,7 +125,7 @@ export default function Home() {
 								setSelected={setSelected}
 							/>
 						) : (
-							<div className="mt-72 grid grid-cols-5 gap-2.5 max-w-lg mx-auto">
+							<div className="grid grid-cols-5 gap-2 max-w-lg mx-auto">
 								{images.map((img) => (
 									<img
 										key={img.url}
