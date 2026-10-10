@@ -68,7 +68,7 @@ export default function Home() {
 			</div> */}
 			<div className="border-t border-border-color flex flex-col md:flex-row gap-x-8 flex-1 min-h-0 overflow-y-auto md:overflow-visible">
 				{/* table - full width on mobile, half width on desktop */}
-				<div className="w-full md:w-1/2 pt-1.5 md:border-r md:border-border-color md:overflow-y-auto custom-scrollbar">
+				<div className="w-full flex flex-col md:w-1/2 pt-1.5 md:border-r md:border-border-color md:overflow-y-auto custom-scrollbar">
 					<p className="pl-2 text-gray-400">Selected Work :–</p>
 					<table className="w-full text-left text-sm text-[0.95rem]">
 						{/* <thead>
@@ -140,6 +140,23 @@ export default function Home() {
 						design, and culture. He works with brands, artists,
 						musicians, and design teams internationally.
 					</p>
+					<div className="ml-2 mt-2 hidden md:flex items-center gap-2 max-w-96">
+						{/* <img
+							className="w-1/2 min-w-0 aspect-[3/4] object-cover"
+							src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOYWidbD8cFoFT0L58W4qcyUJaCBk9EDoPVseo8o_Lbn1-koQpY56rtQ4&s=10"
+							alt="panjab"
+						/>
+						<img
+							className="w-1/2 min-w-0 aspect-[3/4] object-cover"
+							src="https://images.unsplash.com/photo-1666113950458-4b26f1a25979?q=80&w=1036&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+							alt="panjab"
+						/> */}
+						<img
+							className="min-w-0 aspect-[4/3] object-cover"
+							src="https://images.pexels.com/photos/34442874/pexels-photo-34442874.jpeg"
+							alt="panjab"
+						/>
+					</div>
 				</div>
 				{/* right half - details, desktop only */}
 				<div className="hidden pt-2.5 overflow-x-hidden md:flex md:justify-center md:w-1/2 text-sm text-[0.95rem] overflow-y-auto min-h-0">
@@ -202,7 +219,20 @@ export default function Home() {
 					/>
 				</div>
 			)}
-			<div className="border-t border-border-color flex items-center justify-center gap-x-3 mt-auto pt-2 mb-2 text-[0.95rem]">
+			<div className="hidden md:flex items-center pt-2 gap-x-1 justify-between">
+				{gifUrls.map((url, i) => (
+					<img
+						key={url}
+						className={`w-full max-w-[88px] h-auto flex-1 min-w-0 ${
+							selected && "grayscale"
+							// i === colorIndex ? "" : "grayscale"
+						}`}
+						src={url}
+						alt=""
+					/>
+				))}
+			</div>
+			<div className="border-t border-border-color flex items-center justify-center gap-x-3 pt-2 mt-auto mb-2 text-[0.95rem]">
 				<p>sainijaproz@gmail.com</p>
 				<span>·</span>
 				<a
