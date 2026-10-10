@@ -111,9 +111,9 @@ export default function Home() {
 									onMouseLeave={() =>
 										setHoveredProjectId(null)
 									}
-									className={`cursor-pointer hover:bg-gray-100 ${
+									className={`cursor-pointer hover:bg-gray-100/70 ${
 										selected?.id === project.id
-											? "bg-gray-100"
+											? "bg-gray-100/70"
 											: ""
 									}`}
 								>

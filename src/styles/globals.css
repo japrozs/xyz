@@ -3,31 +3,40 @@
 @import url("https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro");
 @import url("https://rsms.me/inter/inter.css");
 @import url("https://db.onlinewebfonts.com/c/4c4a87973ef80fc72049e01b9085fadc?family=ABC+Diatype");
-@import url("https://fonts.cdnfonts.com/css/univers-next-pro");
 @import "tailwindcss";
+
+/* ---------------------------------------
+   Tailwind theme
+--------------------------------------- */
 
 @theme {
 	--color-primary-color: #000;
 	--color-border-color: transparent;
-	/* --color-border-color: oklch(20.8% 0.042 265.755); */
+
 	--size-tiny: "0.89rem";
 	--size-smol: "0.95rem";
+
+	--font-sans: "UniversLTStd", Arial, Helvetica, sans-serif;
 }
+
+/* ---------------------------------------
+   Global scrollbar
+--------------------------------------- */
 
 html,
 body,
 * {
-	/* Hide scrollbar for Chrome, Safari, and newer Edge (WebKit) */
 	&::-webkit-scrollbar {
 		display: none !important;
 	}
 
-	/* Hide scrollbar for Firefox (Standard CSS) */
 	scrollbar-width: none !important;
-
-	/* Hide scrollbar for legacy IE and Edge */
 	-ms-overflow-style: none !important;
 }
+
+/* ---------------------------------------
+   Focus and selection
+--------------------------------------- */
 
 *:focus-visible {
 	outline: 1.5px solid #66ccff;
@@ -44,54 +53,46 @@ body,
 	color: inherit;
 }
 
+/* ---------------------------------------
+   Univers LT Std (CDN)
+--------------------------------------- */
+
 @font-face {
-	font-family: "Univers";
-	font-weight: normal;
-	src: url("/fonts/univers-regular.ttf");
+	font-family: "UniversLTStd";
+	src: url("https://db.onlinewebfonts.com/t/dd888cc5c9e136b8b54c2077c7598823.woff2")
+		format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+
+	ascent-override: 85%;
+	descent-override: 25%;
+	line-gap-override: 0%;
+}
+
+/* ---------------------------------------
+   Berkeley Mono
+--------------------------------------- */
+
+@font-face {
+	font-family: "Berkeley Mono";
+	src: url("/fonts/berkeley-mono-regular.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-	font-family: "Univers-next";
-	font-weight: 450;
-	src: url("/fonts/univers-next-regular.woff2");
+	font-family: "Berkeley Mono";
+	src: url("/fonts/berkeley-mono-bold.woff2") format("woff2");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
 }
 
-@font-face {
-	font-family: "Univers";
-	font-weight: bold;
-	src: url("/fonts/univers-bold.ttf");
-}
-
-@font-face {
-	font-family: "Univers";
-	font-stretch: condensed;
-	font-weight: bold;
-	src: url("/fonts/univers-cn-bold.ttf");
-}
-
-@font-face {
-	font-family: "Univers";
-	font-stretch: condensed;
-	src: url("/fonts/univers-cn-rg.ttf");
-}
-
-@font-face {
-	font-family: "Univers";
-	font-weight: lighter;
-	src: url("/fonts/univers-light.ttf");
-}
-
-@font-face {
-	font-family: "Berkeley mono";
-	font-weight: normal;
-	src: url("/fonts/berkeley-mono-regular.woff2");
-}
-
-@font-face {
-	font-family: "Berkeley mono";
-	font-weight: bold;
-	src: url("/fonts/berkeley-mono-bold.woff2");
-}
+/* ---------------------------------------
+   Helvetica Neue LT Pro
+--------------------------------------- */
 
 @font-face {
 	font-family: "Helvetica Neue LT Pro";
@@ -120,6 +121,10 @@ body,
 	font-display: swap;
 }
 
+/* ---------------------------------------
+   ABC Diatype
+--------------------------------------- */
+
 @font-face {
 	font-family: "abc-diatype";
 	src: url("/fonts/abc-diatype.woff2") format("woff2");
@@ -128,33 +133,55 @@ body,
 	font-style: normal;
 }
 
+/* ---------------------------------------
+   Root styles
+--------------------------------------- */
+
 :root {
-	/* font-family: "Helvetica Neue LT Pro"; */
-	font-family: "Univers-next";
-	font-stretch: 99%;
+	font-family: "UniversLTStd", Arial, Helvetica, sans-serif;
 	font-size: 0.875rem;
+	font-weight: 400;
 	text-rendering: optimizeLegibility;
-	font-weight: 500;
 	background-color: #fff;
 	color: #000;
 }
 
+body {
+	font-family: "UniversLTStd", Arial, Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------------------------------------
+   Font utility classes
+--------------------------------------- */
+
+.univers {
+	font-family: "UniversLTStd", Arial, Helvetica, sans-serif;
+}
+
 .menlo {
-	font-family: "Menlo";
+	font-family: "Menlo", monospace;
 }
+
 .mono {
-	font-family: "Berkeley Mono";
+	font-family: "Berkeley Mono", monospace;
 }
+
+.inter {
+	font-family: "Inter", sans-serif;
+}
+
+/* ---------------------------------------
+   Miscellaneous
+--------------------------------------- */
 
 .blue {
 	color: #2d6cdf;
 }
+
 input,
 .modal,
 .box-shadow {
 	box-shadow: 2px 2px #eee;
-}
-
-.inter {
-	font-family: "Inter";
 }
