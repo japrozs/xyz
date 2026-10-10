@@ -140,7 +140,7 @@ export default function Home() {
 						design, and culture. He works with brands, artists,
 						musicians, and design teams internationally.
 					</p>
-					<div className="ml-2 mt-2 hidden md:flex items-center gap-2 max-w-96">
+					<div className="ml-2 mt-auto mb-2 hidden md:flex items-center gap-2 max-w-lg">
 						{/* <img
 							className="w-1/2 min-w-0 aspect-[3/4] object-cover"
 							src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOYWidbD8cFoFT0L58W4qcyUJaCBk9EDoPVseo8o_Lbn1-koQpY56rtQ4&s=10"
@@ -152,7 +152,7 @@ export default function Home() {
 							alt="panjab"
 						/> */}
 						<img
-							className="min-w-0 aspect-[4/3] object-cover"
+							className="min-w-0 aspect-[5/3] object-cover"
 							src="https://images.pexels.com/photos/34442874/pexels-photo-34442874.jpeg"
 							alt="panjab"
 						/>
@@ -219,7 +219,7 @@ export default function Home() {
 					/>
 				</div>
 			)}
-			<div className="hidden md:flex items-center pt-2 gap-x-1 justify-between">
+			{/* <div className="hidden md:flex items-center pt-2 gap-x-1 justify-between">
 				{gifUrls.map((url, i) => (
 					<img
 						key={url}
@@ -231,7 +231,7 @@ export default function Home() {
 						alt=""
 					/>
 				))}
-			</div>
+			</div> */}
 			<div className="border-t border-border-color flex items-center justify-center gap-x-3 pt-2 mt-auto mb-2 text-[0.95rem]">
 				<p>sainijaproz@gmail.com</p>
 				<span>·</span>
