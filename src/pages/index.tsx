@@ -3,6 +3,7 @@ import AsciiModel from "@/components/ascii-model";
 import { gifUrls, images, Project, projects } from "@/types";
 import { useEffect, useState } from "react";
 import { IoCloseOutline } from "react-icons/io5";
+import { MdArrowOutward } from "react-icons/md";
 export default function Home() {
 	const [selected, setSelected] = useState<Project | null>(null);
 	const [colorIndex, setColorIndex] = useState<number | null>(null);
@@ -34,7 +35,7 @@ export default function Home() {
 			}
 
 			setEmailCopied(true);
-			setTimeout(() => setEmailCopied(false), 5000);
+			setTimeout(() => setEmailCopied(false), 2000);
 		} catch (error) {
 			console.error("Failed to copy email:", error);
 		}
@@ -101,39 +102,115 @@ export default function Home() {
 			<div className="border-t border-border-color flex flex-col md:flex-row gap-x-8 flex-1 min-h-0 overflow-y-auto md:overflow-visible">
 				{/* table - full width on mobile, half width on desktop */}
 				<div className="w-full flex flex-col md:w-1/2 pt-1.5 md:border-r md:border-border-color md:overflow-y-auto custom-scrollbar">
+					<p className="pl-2 text-gray-400">About :–</p>
+					<p className="pl-2">
+						Japroz (JP) Singh is a{" "}
+						<span className="line-through text-gray-400">
+							multidisciplinary creative
+						</span>{" "}
+						human based in Atlanta who works between fashion, music,
+						design, and culture. He works with brands, artists,
+						musicians, and design teams internationally.
+					</p>
+					<div className="pl-2 mt-2 mb-10 flex flex-wrap text-[blue] items-center gap-x-3 gap-y-1">
+						<button
+							type="button"
+							onClick={handleCopyEmail}
+							className="cursor-copy hover:underline underline-offset-2"
+						>
+							{emailCopied ? "[Copied]" : "Email"}
+						</button>
+						<a
+							href="https://instagram.com/dysleks1k"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="inline-flex items-center gap-0.5 hover:underline underline-offset-2"
+						>
+							Instagram{" "}
+							<MdArrowOutward className="ml-0.5 shrink-0" />
+						</a>
+						<a
+							href="https://twitter.com/dysleks1k"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="inline-flex items-center gap-0.5 hover:underline underline-offset-2"
+						>
+							Twitter{" "}
+							<MdArrowOutward className="ml-0.5 shrink-0" />
+						</a>
+						<a
+							href="https://music.apple.com/profile/dysleks1k"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="inline-flex items-center gap-0.5 hover:underline underline-offset-2"
+						>
+							Music <MdArrowOutward className="ml-0.5 shrink-0" />
+						</a>
+					</div>
 					<p className="pl-2 text-gray-400">Selected Work :–</p>
 					<table className="w-full text-left text-sm text-[0.95rem]">
-						{/* <thead>
-							<tr className="border-b border-border-color">
-								<th className="pl-2 pb-1 font-normal">
-									Project
-								</th>
-								<th className="pb-1 font-normal">Role</th>
-								<th className="pr-2 pb-1 font-normal text-right hidden md:table-cell">
-									Year
-								</th>
-							</tr>
-						</thead> */}
 						<tbody>
-							{/* <tr className={`text-gray-400`}>
+							{projects.slice(0, 1).map((project) => (
+								<tr
+									key={project.id}
+									onClick={() => setSelected(project)}
+									onMouseEnter={() =>
+										setHoveredProjectId(project.id)
+									}
+									onMouseLeave={() =>
+										setHoveredProjectId(null)
+									}
+									className={`cursor-pointer hover:bg-gray-100/90 ${
+										selected?.id === project.id
+											? "bg-gray-100/90"
+											: ""
+									}`}
+								>
+									<td className="pl-2 pt-0.5 py-[0.1rem]">
+										{project.name}
+									</td>
+									<td className="pt-0.5 py-[0.1rem]">
+										{project.role}
+									</td>
+									<td className="pr-2 pt-0.5 py-[0.1rem] text-right hidden md:table-cell">
+										{project.year}
+									</td>
+								</tr>
+							))}
+
+							<tr className="text-gray-400">
 								<td className="pl-2 pt-0.5 py-[0.1rem]">
 									??????
 								</td>
-								<td className="pt-0.5 py-[0.1rem]">???</td>
+								<td className="pt-0.5 py-[0.1rem]">
+									Brand + Streetwear
+								</td>
 								<td className="pr-2 pt-0.5 py-[0.1rem] text-right hidden md:table-cell">
-									In progress
+									Now
 								</td>
 							</tr>
-							<tr className={`text-gray-400`}>
+							<tr className="text-gray-400">
+								<td className="pl-2 pt-0.5 py-[0.1rem]">
+									Tori Ruiz
+								</td>
+								<td className="pt-0.5 py-[0.1rem]">
+									Web Design
+								</td>
+								<td className="pr-2 pt-0.5 py-[0.1rem] text-right hidden md:table-cell">
+									Now
+								</td>
+							</tr>
+							<tr className="text-gray-400">
 								<td className="pl-2 pt-0.5 py-[0.1rem]">
 									RUB3N
 								</td>
-								<td className="pt-0.5 py-[0.1rem]">Art</td>
+								<td className="pt-0.5 py-[0.1rem]">Design</td>
 								<td className="pr-2 pt-0.5 py-[0.1rem] text-right hidden md:table-cell">
-									In progress
+									Now
 								</td>
-							</tr> */}
-							{projects.map((project) => (
+							</tr>
+
+							{projects.slice(1).map((project) => (
 								<tr
 									key={project.id}
 									onClick={() => setSelected(project)}
@@ -162,16 +239,7 @@ export default function Home() {
 							))}
 						</tbody>
 					</table>
-					<p className="pl-2 text-gray-400 mt-10">About :–</p>
-					<p className="pl-2">
-						Japroz (JP) Singh is a{" "}
-						<span className="line-through">
-							multidisciplinary creative
-						</span>{" "}
-						human based in Atlanta who works between fashion, music,
-						design, and culture. He works with brands, artists,
-						musicians, and design teams internationally.
-					</p>
+
 					<div className="ml-2 mt-auto mb-2 hidden md:flex items-center gap-2 max-w-lg">
 						{/* <img
 							className="w-1/2 min-w-0 aspect-[3/4] object-cover"
@@ -237,16 +305,12 @@ export default function Home() {
 					</div>
 				</div>
 			</div>
-			{/* image grid, mobile only — sits just above the footer */}
-			<div className="max-w-lg mx-auto grid grid-cols-5 gap-1 p-2 md:hidden">
+			{/* Mobile image gallery */}
+			<div className="w-full grid grid-cols-5 gap-2 p-2 md:hidden shrink-0">
 				{images.map((img) => (
 					<img
 						key={img.url}
-						className={`aspect-square object-cover cursor-pointer ${
-							img.projectId === hoveredProjectId
-								? "grayscale-0"
-								: "grayscale-0 hover:grayscale-0"
-						}`}
+						className="w-full min-w-0 h-16 object-cover cursor-pointer"
 						src={img.url}
 						onClick={() => {
 							const match = projects.find(
@@ -279,33 +343,6 @@ export default function Home() {
 					/>
 				))}
 			</div> */}
-			<div className="border-t border-border-color flex items-center justify-center gap-x-3 pt-2 mt-auto mb-2 text-[0.95rem]">
-				<button
-					type="button"
-					onClick={handleCopyEmail}
-					className="cursor-copy"
-				>
-					{emailCopied ? "Copied to clipboard" : "Email"}
-				</button>
-				<span>·</span>
-				<a
-					href="https://instagram.com/dysleks1k"
-					target="_blank"
-					rel="noopener noreferrer"
-					className="hover:underline"
-				>
-					Instagram
-				</a>
-				<span>·</span>
-				<a
-					href="https://twitter.com/dysleks1k"
-					target="_blank"
-					rel="noopener noreferrer"
-					className="hover:underline"
-				>
-					Twitter
-				</a>
-			</div>
 		</div>
 	);
 }
