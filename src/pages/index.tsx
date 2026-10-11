@@ -296,6 +296,15 @@ export default function Home() {
 				>
 					Instagram
 				</a>
+				<span>·</span>
+				<a
+					href="https://twitter.com/dysleks1k"
+					target="_blank"
+					rel="noopener noreferrer"
+					className="hover:underline"
+				>
+					Twitter
+				</a>
 			</div>
 		</div>
 	);
