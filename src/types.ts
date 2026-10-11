@@ -107,7 +107,7 @@ export const images: AboutImage[] = [
 	{ url: "/mosaic/one.png", projectId: "kreed" },
 	{ url: "/mosaic/two.png", projectId: "primary-union" },
 	{ url: "/mosaic/three.png", projectId: "ftr" },
-	{ url: "/mosaic/twenty.png", projectId: "kreed-freestyle" },
+	{ url: "/mosaic/twenty.png", projectId: "kreed" },
 	{ url: "/mosaic/four.png", projectId: "ftr" },
 	{ url: "/mosaic/twelve.png", projectId: "ftr" },
 	{ url: "/mosaic/nineteen.png", projectId: "kreed-freestyle" },
