@@ -142,8 +142,8 @@ body,
 	font-size: 0.875rem;
 	font-weight: 400;
 	text-rendering: optimizeLegibility;
-	background-color: #fff;
-	color: #000;
+	background-color: #000;
+	color: #eee;
 }
 
 body {
@@ -183,5 +183,5 @@ body {
 input,
 .modal,
 .box-shadow {
-	box-shadow: 2px 2px #eee;
+	box-shadow: 2px 2px #101828;
 }

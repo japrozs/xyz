@@ -8,6 +8,37 @@ export default function Home() {
 	const [hoveredProjectId, setHoveredProjectId] = useState<string | null>(
 		null,
 	);
+	const [emailCopied, setEmailCopied] = useState(false);
+
+	const handleCopyEmail = async () => {
+		const email = "sainijaproz@gmail.com";
+
+		try {
+			if (navigator.clipboard && window.isSecureContext) {
+				await navigator.clipboard.writeText(email);
+			} else {
+				const textarea = document.createElement("textarea");
+				textarea.value = email;
+				textarea.style.position = "fixed";
+				textarea.style.opacity = "0";
+
+				document.body.appendChild(textarea);
+				textarea.focus();
+				textarea.select();
+
+				const success = document.execCommand("copy");
+				document.body.removeChild(textarea);
+
+				if (!success) throw new Error("Copy failed");
+			}
+
+			setEmailCopied(true);
+			setTimeout(() => setEmailCopied(false), 5000);
+		} catch (error) {
+			console.error("Failed to copy email:", error);
+		}
+	};
+
 	useEffect(() => {
 		// pick the random index only after mount to avoid SSR/client hydration mismatch
 		setColorIndex(Math.floor(Math.random() * gifUrls.length));
@@ -69,7 +100,7 @@ export default function Home() {
 			<div className="border-t border-border-color flex flex-col md:flex-row gap-x-8 flex-1 min-h-0 overflow-y-auto md:overflow-visible">
 				{/* table - full width on mobile, half width on desktop */}
 				<div className="w-full flex flex-col md:w-1/2 pt-1.5 md:border-r md:border-border-color md:overflow-y-auto custom-scrollbar">
-					<p className="pl-2 text-gray-400">Selected Work :–</p>
+					<p className="pl-2 text-gray-600">Selected Work :–</p>
 					<table className="w-full text-left text-sm text-[0.95rem]">
 						{/* <thead>
 							<tr className="border-b border-border-color">
@@ -111,9 +142,9 @@ export default function Home() {
 									onMouseLeave={() =>
 										setHoveredProjectId(null)
 									}
-									className={`cursor-pointer hover:bg-gray-100/70 ${
+									className={`cursor-pointer hover:bg-gray-100/5 ${
 										selected?.id === project.id
-											? "bg-gray-100/70"
+											? "bg-gray-100/5"
 											: ""
 									}`}
 								>
@@ -130,7 +161,7 @@ export default function Home() {
 							))}
 						</tbody>
 					</table>
-					<p className="pl-2 text-gray-400 mt-10">About :–</p>
+					<p className="pl-2 text-gray-600 mt-10">About :–</p>
 					<p className="pl-2">
 						Japroz (JP) Singh is a{" "}
 						<span className="line-through">
@@ -152,7 +183,7 @@ export default function Home() {
 							alt="panjab"
 						/> */}
 						<img
-							className="min-w-0 aspect-[5/3] object-cover"
+							className="min-w-0 aspect-[5/3] object-cover box-shadow"
 							src="https://images.pexels.com/photos/34442874/pexels-photo-34442874.jpeg"
 							alt="panjab"
 						/>
@@ -212,7 +243,7 @@ export default function Home() {
 			</div>
 			{/* mobile full-page modal */}
 			{selected && (
-				<div className="text-[0.95rem] fixed inset-0 z-50 bg-white/96 p-2 md:hidden overflow-y-auto">
+				<div className="text-[0.95rem] fixed inset-0 z-50 bg-black/97 p-2 md:hidden overflow-y-auto">
 					<selected.component
 						project={selected}
 						setSelected={setSelected}
@@ -233,13 +264,19 @@ export default function Home() {
 				))}
 			</div> */}
 			<div className="border-t border-border-color flex items-center justify-center gap-x-3 pt-2 mt-auto mb-2 text-[0.95rem]">
-				<p>sainijaproz@gmail.com</p>
+				<button
+					type="button"
+					onClick={handleCopyEmail}
+					className="cursor-copy"
+				>
+					{emailCopied ? "Copied to clipboard" : "Email"}
+				</button>
 				<span>·</span>
 				<a
 					href="https://instagram.com/dysleks1k"
 					target="_blank"
 					rel="noopener noreferrer"
-					className=""
+					className="hover:underline"
 				>
 					Instagram
 				</a>
