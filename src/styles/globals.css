@@ -142,7 +142,8 @@ body,
 	font-size: 0.875rem;
 	font-weight: 400;
 	text-rendering: optimizeLegibility;
-	background-color: #fafafa;
+	background-color: #fff;
+	/* background-color: #fafafa; */
 	color: #000;
 }
 

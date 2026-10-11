@@ -101,7 +101,7 @@ export default function Home() {
 			<div className="border-t border-border-color flex flex-col md:flex-row gap-x-8 flex-1 min-h-0 overflow-y-auto md:overflow-visible">
 				{/* table - full width on mobile, half width on desktop */}
 				<div className="w-full flex flex-col md:w-1/2 pt-1.5 md:border-r md:border-border-color md:overflow-y-auto custom-scrollbar">
-					<p className="pl-2 text-gray-600">Selected Work :–</p>
+					<p className="pl-2 text-gray-400">Selected Work :–</p>
 					<table className="w-full text-left text-sm text-[0.95rem]">
 						{/* <thead>
 							<tr className="border-b border-border-color">
@@ -162,7 +162,7 @@ export default function Home() {
 							))}
 						</tbody>
 					</table>
-					<p className="pl-2 text-gray-600 mt-10">About :–</p>
+					<p className="pl-2 text-gray-400 mt-10">About :–</p>
 					<p className="pl-2">
 						Japroz (JP) Singh is a{" "}
 						<span className="line-through">
