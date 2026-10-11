@@ -184,5 +184,6 @@ body {
 input,
 .modal,
 .box-shadow {
-	box-shadow: 2px 2px var(--color-border-color);
+	box-shadow: 2px 2px transparent;
+	/* box-shadow: 2px 2px var(--color-border-color); */
 }
