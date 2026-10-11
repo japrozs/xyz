@@ -1,4 +1,5 @@
 "use client";
+import AsciiModel from "@/components/ascii-model";
 import { gifUrls, images, Project, projects } from "@/types";
 import { useEffect, useState } from "react";
 import { IoCloseOutline } from "react-icons/io5";
@@ -142,9 +143,9 @@ export default function Home() {
 									onMouseLeave={() =>
 										setHoveredProjectId(null)
 									}
-									className={`cursor-pointer hover:bg-gray-100/5 ${
+									className={`cursor-pointer hover:bg-gray-100/90 ${
 										selected?.id === project.id
-											? "bg-gray-100/5"
+											? "bg-gray-100/90"
 											: ""
 									}`}
 								>
@@ -198,24 +199,39 @@ export default function Home() {
 								setSelected={setSelected}
 							/>
 						) : (
-							<div className="grid grid-cols-5 gap-2 max-w-lg mx-auto">
-								{images.map((img) => (
-									<img
-										key={img.url}
-										className={`aspect-square object-cover cursor-pointer ${
-											img.projectId === hoveredProjectId
-												? "grayscale-0"
-												: "grayscale-0 hover:grayscale-0"
-										}`}
-										src={img.url}
-										onClick={() => {
-											const match = projects.find(
-												(p) => p.id === img.projectId,
-											);
-											if (match) setSelected(match);
-										}}
+							<div>
+								<div className="grid grid-cols-5 gap-2 max-w-lg mx-auto">
+									{images.map((img) => (
+										<img
+											key={img.url}
+											className={`aspect-square object-cover cursor-pointer ${
+												img.projectId ===
+												hoveredProjectId
+													? "grayscale-0"
+													: "grayscale-0 hover:grayscale-0"
+											}`}
+											src={img.url}
+											onClick={() => {
+												const match = projects.find(
+													(p) =>
+														p.id === img.projectId,
+												);
+												if (match) setSelected(match);
+											}}
+										/>
+									))}
+								</div>
+								<div className="hidden md:block w-full max-w-lg mx-auto mt-6 h-[350px] relative overflow-hidden">
+									<AsciiModel
+										src="/models/uzi.glb"
+										rotationSpeed={0.015}
+										scale={3}
+										resolution={0.5}
+										characters=" ._-+*"
+										color="blue"
+										backgroundColor="transparent"
 									/>
-								))}
+								</div>
 							</div>
 						)}
 					</div>

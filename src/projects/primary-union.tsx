@@ -27,19 +27,19 @@ export const PrimaryUnionProject: React.FC<PrimaryUnionProjectProps> = ({
 		<div>
 			<ProjectIntro project={project} setSelected={setSelected} />
 			<img
-				className="border border-gray-900 box-shadow my-2 w-full"
+				className="border border-border-color box-shadow my-2 w-full"
 				src="/projects/primary-union/one.avif"
 			/>
 			<img
-				className="border border-gray-900 box-shadow mb-2 w-full"
+				className="border border-border-color box-shadow mb-2 w-full"
 				src="/projects/primary-union/two.avif"
 			/>
 			<img
-				className="border border-gray-900 box-shadow mb-2 w-full"
+				className="border border-border-color box-shadow mb-2 w-full"
 				src="/projects/primary-union/three.avif"
 			/>
 			<img
-				className="border border-gray-900 box-shadow mb-2 w-full"
+				className="border border-border-color box-shadow mb-2 w-full"
 				src="/projects/primary-union/four.avif"
 			/>
 			<div className="flex items-center gap-2 mb-2 overflow-hidden">
@@ -47,7 +47,7 @@ export const PrimaryUnionProject: React.FC<PrimaryUnionProjectProps> = ({
 					ref={(el) => {
 						videoRefs.current[0] = el;
 					}}
-					className="border border-gray-900 shadow-sm w-1/3 min-w-0"
+					className="border border-border-color shadow-sm w-1/3 min-w-0"
 					src="/projects/primary-union/six_compressed.mp4"
 					autoPlay
 					loop
@@ -58,7 +58,7 @@ export const PrimaryUnionProject: React.FC<PrimaryUnionProjectProps> = ({
 					ref={(el) => {
 						videoRefs.current[1] = el;
 					}}
-					className="border border-gray-900 shadow-sm w-1/3 min-w-0"
+					className="border border-border-color shadow-sm w-1/3 min-w-0"
 					src="/projects/primary-union/seven_compressed.mp4"
 					autoPlay
 					loop
@@ -69,7 +69,7 @@ export const PrimaryUnionProject: React.FC<PrimaryUnionProjectProps> = ({
 					ref={(el) => {
 						videoRefs.current[2] = el;
 					}}
-					className="border border-gray-900 shadow-sm w-1/3 min-w-0"
+					className="border border-border-color shadow-sm w-1/3 min-w-0"
 					src="/projects/primary-union/eight_compressed.mp4"
 					autoPlay
 					loop
@@ -78,7 +78,7 @@ export const PrimaryUnionProject: React.FC<PrimaryUnionProjectProps> = ({
 				/>
 			</div>
 			<img
-				className="border border-gray-900 box-shadow w-full"
+				className="border border-border-color box-shadow w-full"
 				src="/projects/primary-union/five.avif"
 			/>
 		</div>
