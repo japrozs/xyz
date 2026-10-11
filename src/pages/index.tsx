@@ -191,7 +191,7 @@ export default function Home() {
 							</tr>
 							<tr className="text-gray-400">
 								<td className="pl-2 pt-0.5 py-[0.1rem]">
-									Tori Ruiz
+									VICTORIA RUIZ
 								</td>
 								<td className="pt-0.5 py-[0.1rem]">
 									Web Design
