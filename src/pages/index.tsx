@@ -127,7 +127,7 @@ export default function Home() {
 							className="inline-flex items-center gap-0.5 hover:underline underline-offset-2"
 						>
 							Instagram{" "}
-							<MdArrowOutward className="ml-0.5 shrink-0" />
+							<MdArrowOutward className="-mt-0.5 md:-mt-1 ml-0.5 shrink-0" />
 						</a>
 						<a
 							href="https://twitter.com/dysleks1k"
@@ -136,7 +136,7 @@ export default function Home() {
 							className="inline-flex items-center gap-0.5 hover:underline underline-offset-2"
 						>
 							Twitter{" "}
-							<MdArrowOutward className="ml-0.5 shrink-0" />
+							<MdArrowOutward className="-mt-0.5 md:-mt-1 ml-0.5 shrink-0" />
 						</a>
 						<a
 							href="https://music.apple.com/profile/dysleks1k"
@@ -144,7 +144,8 @@ export default function Home() {
 							rel="noopener noreferrer"
 							className="inline-flex items-center gap-0.5 hover:underline underline-offset-2"
 						>
-							Music <MdArrowOutward className="ml-0.5 shrink-0" />
+							Music{" "}
+							<MdArrowOutward className="-mt-0.5 md:-mt-1 ml-0.5 shrink-0" />
 						</a>
 					</div>
 					<p className="pl-2 text-gray-400">Selected Work :–</p>
