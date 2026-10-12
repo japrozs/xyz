@@ -289,7 +289,7 @@ export default function Home() {
 										/>
 									))}
 								</div>
-								<div className="hidden md:block w-full max-w-lg mx-auto mt-6 h-[350px] relative overflow-hidden">
+								<div className="hidden md:block w-full max-w-lg mx-auto mt-0 h-[350px] relative overflow-hidden">
 									<AsciiModel
 										src="/models/uzi.glb"
 										rotationSpeed={0.015}

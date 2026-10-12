@@ -5,7 +5,7 @@ export default function Document() {
 		<Html lang="en">
 			<Head>
 				<link rel="icon" href="/favicon.ico" />
-				<meta name="theme-color" content="#000" />
+				<meta name="theme-color" content="#0000FF" />
 				<meta property="og:title" content="jp" />
 				<meta property="og:url" content="https://xyz.japroz.me/" />
 				<meta property="og:type" content="website" />
