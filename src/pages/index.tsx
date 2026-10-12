@@ -160,9 +160,9 @@ export default function Home() {
 									onMouseLeave={() =>
 										setHoveredProjectId(null)
 									}
-									className={`cursor-pointer hover:bg-gray-100/90 ${
+									className={`cursor-pointer hover:bg-gray-100/40 ${
 										selected?.id === project.id
-											? "bg-gray-100/90"
+											? "bg-gray-100/40"
 											: ""
 									}`}
 								>
@@ -220,9 +220,9 @@ export default function Home() {
 									onMouseLeave={() =>
 										setHoveredProjectId(null)
 									}
-									className={`cursor-pointer hover:bg-gray-100/90 ${
+									className={`cursor-pointer hover:bg-gray-100/40 ${
 										selected?.id === project.id
-											? "bg-gray-100/90"
+											? "bg-gray-100/40"
 											: ""
 									}`}
 								>

@@ -34,7 +34,7 @@ export const projects: Project[] = [
 		id: "primary-union",
 		name: "PRIMARY UNION",
 		year: "2026",
-		role: "Brand Design",
+		role: "360",
 		description:
 			"End-to-end creative direction and visual identity development for Primary Union, a streetwear brand built from the ground up. The project encompasses logo and identity design, color systems, art direction, fashion design, brand aesthetics, and a fully responsive digital experience across desktop and mobile.",
 		link: "https://example.com",
@@ -110,7 +110,7 @@ export const images: AboutImage[] = [
 	{ url: "/mosaic/twenty.png", projectId: "kreed" },
 	{ url: "/mosaic/four.png", projectId: "ftr" },
 	{ url: "/mosaic/twelve.png", projectId: "ftr" },
-	{ url: "/mosaic/nineteen.png", projectId: "kreed-freestyle" },
+	{ url: "/mosaic/nineteen.png", projectId: "kreed" },
 	{ url: "/mosaic/six.png", projectId: "ftr" },
 	{ url: "/mosaic/seven.png", projectId: "ftr" },
 	{ url: "/mosaic/eight.png", projectId: "senna" },
