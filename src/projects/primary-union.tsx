@@ -42,7 +42,7 @@ export const PrimaryUnionProject: React.FC<PrimaryUnionProjectProps> = ({
 				className="border border-border-color box-shadow mb-2 w-full"
 				src="/projects/primary-union/four.avif"
 			/>
-			<div className="flex items-center gap-2 mb-2 overflow-hidden">
+			{/* <div className="flex items-center gap-2 mb-2 overflow-hidden">
 				<video
 					ref={(el) => {
 						videoRefs.current[0] = el;
@@ -80,7 +80,7 @@ export const PrimaryUnionProject: React.FC<PrimaryUnionProjectProps> = ({
 			<img
 				className="border border-border-color box-shadow w-full"
 				src="/projects/primary-union/five.avif"
-			/>
+			/> */}
 		</div>
 	);
 };
