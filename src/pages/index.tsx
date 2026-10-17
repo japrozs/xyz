@@ -252,11 +252,16 @@ export default function Home() {
 							src="https://images.unsplash.com/photo-1666113950458-4b26f1a25979?q=80&w=1036&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
 							alt="panjab"
 						/> */}
-						<img
-							className="min-w-0 aspect-[5/3] object-cover box-shadow"
-							src="https://images.pexels.com/photos/34442874/pexels-photo-34442874.jpeg"
-							alt="panjab"
-						/>
+						<div className="relative min-w-0">
+							<img
+								className="min-w-0 aspect-[5/3] object-cover box-shadow"
+								src="panjab.avif"
+								alt="panjab"
+							/>
+							<div className="absolute bottom-0 left-0 bg-[blue] px-1.5 py-1 text-xs text-white">
+								panjab.avif
+							</div>
+						</div>
 					</div>
 				</div>
 				{/* right half - details, desktop only */}
@@ -273,7 +278,7 @@ export default function Home() {
 									{images.map((img) => (
 										<img
 											key={img.url}
-											className={`aspect-square object-cover cursor-pointer transition-opacity duration-100 ${
+											className={`aspect-square object-cover cursor-pointer transition-opacity duration-300 ${
 												hoveredProjectId !== null &&
 												images.some(
 													(image) =>
