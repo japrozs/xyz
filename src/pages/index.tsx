@@ -273,12 +273,26 @@ export default function Home() {
 									{images.map((img) => (
 										<img
 											key={img.url}
-											className={`aspect-square object-cover cursor-pointer ${
-												img.projectId ===
-												hoveredProjectId
-													? "grayscale-0"
-													: "grayscale-0 hover:grayscale-0"
+											className={`aspect-square object-cover cursor-pointer transition-opacity duration-100 ${
+												hoveredProjectId !== null &&
+												images.some(
+													(image) =>
+														image.projectId ===
+														hoveredProjectId,
+												) &&
+												img.projectId !==
+													hoveredProjectId
+													? "opacity-20"
+													: "opacity-100"
 											}`}
+											onMouseEnter={() =>
+												setHoveredProjectId(
+													img.projectId,
+												)
+											}
+											onMouseLeave={() =>
+												setHoveredProjectId(null)
+											}
 											src={img.url}
 											onClick={() => {
 												const match = projects.find(
