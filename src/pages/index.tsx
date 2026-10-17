@@ -278,7 +278,7 @@ export default function Home() {
 									{images.map((img) => (
 										<img
 											key={img.url}
-											className={`aspect-square object-cover cursor-pointer transition-opacity duration-300 ${
+											className={`aspect-square object-cover cursor-pointer transition-opacity duration-100 ${
 												hoveredProjectId !== null &&
 												images.some(
 													(image) =>
