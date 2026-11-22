@@ -54,8 +54,7 @@ body,
 
 @font-face {
 	font-family: "UniversLTStd";
-	src: url("https://db.onlinewebfonts.com/t/dd888cc5c9e136b8b54c2077c7598823.woff2")
-		format("woff2");
+	src: url("/fonts/UniversLTStd.woff2") format("woff2");
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
@@ -66,15 +65,27 @@ body,
 --------------------------------------- */
 
 :root {
-	font-family: "UniversLTStd", Arial, Helvetica, sans-serif;
+	font-family: "UniversLTStd";
+	/* font-family: "ABC Diatype"; */
 	font-size: 0.875rem;
 	font-weight: 400;
+	/* font-weight: 480; */
 	text-rendering: optimizeLegibility;
 	background-color: #fff;
 	color: #000;
 }
 
+@font-face {
+	font-family: "ABC Diatype";
+	src: url("/fonts/ABCDiatypeWidthsVariable.woff2") format("woff2");
+	font-weight: 200 1000;
+	font-stretch: 50% 200%;
+	font-style: oblique -12deg 0deg;
+	font-display: swap;
+}
+
 body {
+	/* font-family: "ABC Diatype"; */
 	font-family: "UniversLTStd", Arial, Helvetica, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;

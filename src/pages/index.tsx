@@ -151,7 +151,7 @@ export default function Home() {
 					<p className="pl-2 text-gray-400">Selected Work :–</p>
 					<table className="w-full text-left text-sm text-[0.95rem]">
 						<tbody>
-							{projects.slice(0, 1).map((project) => (
+							{projects.slice(0, 2).map((project) => (
 								<tr
 									key={project.id}
 									onClick={() => setSelected(project)}
@@ -181,10 +181,10 @@ export default function Home() {
 
 							<tr className="text-gray-400">
 								<td className="pl-2 pt-0.5 py-[0.1rem]">
-									??????
+									DOMANIQUE GIPSON
 								</td>
 								<td className="pt-0.5 py-[0.1rem]">
-									Brand + Streetwear
+									Web + Identity
 								</td>
 								<td className="pr-2 pt-0.5 py-[0.1rem] text-right hidden md:table-cell">
 									Now
@@ -195,7 +195,7 @@ export default function Home() {
 									VICTORIA RUIZ
 								</td>
 								<td className="pt-0.5 py-[0.1rem]">
-									Web Design
+									Web + Identity
 								</td>
 								<td className="pr-2 pt-0.5 py-[0.1rem] text-right hidden md:table-cell">
 									Now
@@ -211,7 +211,7 @@ export default function Home() {
 								</td>
 							</tr>
 
-							{projects.slice(1).map((project) => (
+							{projects.slice(2).map((project) => (
 								<tr
 									key={project.id}
 									onClick={() => setSelected(project)}
@@ -274,7 +274,7 @@ export default function Home() {
 							/>
 						) : (
 							<div>
-								<div className="grid grid-cols-5 gap-2 max-w-lg mx-auto">
+								<div className="grid grid-cols-6 gap-2 max-w-[38rem] mx-auto">
 									{images.map((img) => (
 										<img
 											key={img.url}
@@ -326,7 +326,7 @@ export default function Home() {
 				</div>
 			</div>
 			{/* Mobile image gallery */}
-			<div className="w-full grid grid-cols-5 gap-2 p-2 md:hidden shrink-0">
+			<div className="w-full grid grid-cols-6 gap-1 p-2 md:hidden shrink-0">
 				{images.map((img) => (
 					<img
 						key={img.url}

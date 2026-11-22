@@ -5,6 +5,7 @@ import { Manifesto } from "./projects/manifesto";
 import { PrimaryUnionProject } from "./projects/primary-union";
 import { SennaProject } from "./projects/senna";
 import { KreedProjectFreestyle } from "./projects/kreed-freestyle";
+import { WearNTear } from "./projects/wear-n-tear";
 
 export type Project = {
 	id: string;
@@ -20,6 +21,16 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+	{
+		id: "wear-n-tear",
+		name: "SLAWN × Wear & Tear",
+		year: "2026",
+		role: "360",
+		description:
+			"Brand identity development, visual identity, and apparel design for Wear N Tear, a fashion project in collaboration with London-based artist Slawn. Contributions span logo design, custom camouflage patterns, clothing graphics, and accessories, exploring the intersection of contemporary art, fashion, and streetwear.",
+		link: "https://example.com",
+		component: WearNTear,
+	},
 	{
 		id: "kreed-freestyle",
 		name: "KREED × Label Ticket Freestyle",
@@ -54,7 +65,7 @@ export const projects: Project[] = [
 		id: "senna",
 		name: "SENNA",
 		year: "2026",
-		role: "Web Design",
+		role: "Web",
 		description:
 			"Product design and web development for Senna, a unified document search platform that brings files from multiple cloud providers into one streamlined, centralized search experience.",
 		link: "https://example.com",
@@ -64,7 +75,7 @@ export const projects: Project[] = [
 		id: "ftr",
 		name: "FTR",
 		year: "2025",
-		role: "Graphic Design",
+		role: "Graphic",
 		description:
 			'Graphic direction for FTR ["Fuck the Rules"], the visual campaign extension of streetwear label Primary Union, featuring a series of dystopian graphics and posters developed across the brand’s digital ecosystem.',
 		link: "https://example.com",
@@ -108,9 +119,11 @@ export const images: AboutImage[] = [
 	{ url: "/mosaic/two.png", projectId: "primary-union" },
 	{ url: "/mosaic/three.png", projectId: "ftr" },
 	{ url: "/mosaic/twenty.png", projectId: "kreed" },
+	{ url: "/mosaic/twenty-one.png", projectId: "wear-n-tear" },
 	{ url: "/mosaic/four.png", projectId: "ftr" },
 	{ url: "/mosaic/twelve.png", projectId: "ftr" },
 	{ url: "/mosaic/nineteen.png", projectId: "kreed" },
+	{ url: "/mosaic/twenty-two.png", projectId: "wear-n-tear" },
 	{ url: "/mosaic/six.png", projectId: "ftr" },
 	{ url: "/mosaic/seven.png", projectId: "ftr" },
 	{ url: "/mosaic/eight.png", projectId: "senna" },
@@ -120,8 +133,10 @@ export const images: AboutImage[] = [
 	{ url: "/mosaic/eleven.png", projectId: "primary-union" },
 	{ url: "/mosaic/thirteen.png", projectId: "ftr" },
 	{ url: "/mosaic/five.png", projectId: "primary-union" },
+	{ url: "/mosaic/twenty-three.png", projectId: "wear-n-tear" },
 	{ url: "/mosaic/fourteen.png", projectId: "ftr" },
 	{ url: "/mosaic/eighteen.png", projectId: "kreed-freestyle" },
 	{ url: "/mosaic/fifteen.png", projectId: "primary-union" },
 	{ url: "/mosaic/seventeen.png", projectId: "kreed-freestyle" },
+	{ url: "/mosaic/twenty-four.png", projectId: "wear-n-tear" },
 ];
